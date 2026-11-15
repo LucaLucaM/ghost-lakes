@@ -7,7 +7,7 @@
                                    table figure timelapse (default: all) and after_pm
   python run.py terrain            terrain AI: train, leave-one-region-out test, Romanian candidates
   python run.py validate           terrain AI vs documented drained lakes (leave-Bucharest-out)
-  python run.py archive [CITY ...] [--perm N]   archive detector (84 cities; --perm 0 = wave 1)
+  python run.py archive [CITY ...] [--perm N]   archive detector (84 cities listed, 59 run; --perm 0 = wave 1)
   python run.py screen [CITY ...]  2023->2026 infill screen of ~120 cities with radar confirmation
   python run.py world scan|hotspots  blind world scan of every urban area (batch job ~1 h, then ranking)
   python run.py radar FILE.geojson BEFORE_START BEFORE_END AFTER_START AFTER_END

@@ -10,16 +10,21 @@ BROWSERS = [r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
             r"C:\Program Files\Google\Chrome\Application\chrome.exe",
             "/usr/bin/google-chrome", "/usr/bin/chromium"]
 CSS = """
-@page {{ size: A4; margin: 9mm 12mm; }}
+@page {{ size: A4; margin: 6mm 11mm 5mm; }}
 body {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: {pt}pt; line-height: 1.28; color: #111; }}
 h1 {{ font-size: {h1}pt; margin: 0 0 2pt; }}
+h2 {{ font-size: {h2}pt; margin: 6pt 0 2pt; color: #b0002a; }}
 p, ul, ol {{ margin: 3pt 0; }}  ul, ol {{ padding-left: 15pt; }}  li {{ margin: 1pt 0; }}
 blockquote {{ margin: 5pt 0; padding: 5pt 8pt; background: #fff1f3; border-left: 3pt solid #ff2d55; }}
 blockquote p {{ margin: 0; }}
-img {{ display: block; max-width: 100%; max-height: 58mm; margin: 3pt auto; }}
+img {{ display: block; max-width: 100%; max-height: 37mm; margin: 3pt auto; }}
 code {{ font-size: {code}pt; }}
 table {{ border-collapse: collapse; margin: 4pt 0; }}
 th, td {{ border: 0.5pt solid #bbb; padding: 1.5pt 5pt; text-align: left; }}  th {{ background: #f3f3f3; }}
+sup {{ font-size: 70%; line-height: 0; }}
+.footnote {{ font-size: 6.6pt; color: #444; }}  .footnote hr {{ margin: 3pt 0 1pt; border: 0; border-top: 0.5pt solid #bbb; }}
+.footnote ol {{ columns: 5; column-gap: 8pt; margin: 0; padding-left: 12pt; }}  .footnote li {{ margin: 0; }}  .footnote p {{ margin: 0; }}
+.footnote a {{ color: #444; }}  .footnote-backref {{ display: none; }}
 """
 
 
@@ -35,7 +40,7 @@ def pdf(src="WRITEUP.md", pt=9.0):
         with open(os.path.join(os.path.dirname(src_path), m.group(1)), "rb") as fh:
             return f'src="data:image/png;base64,{base64.b64encode(fh.read()).decode()}"'
     body = re.sub(r'src="([^"]+\.png)"', inline, body)
-    css = CSS.format(pt=pt, h1=pt + 7, code=pt - 0.5)
+    css = CSS.format(pt=pt, h1=pt + 7, h2=pt + 2, code=pt - 0.5)
     stem = os.path.splitext(src_path)[0]
     with open(stem + ".html", "w", encoding="utf-8") as f:
         f.write(f"<!doctype html><html><head><meta charset='utf-8'><style>{css}</style></head><body>{body}</body></html>")
