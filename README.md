@@ -45,13 +45,6 @@ Mexico City (built on drained Lake Texcoco), Phnom Penh (15 of 25 lakes filled b
 - **Misses** vegetated marshes and small fills under 0.5 ha (33 ha is a lower bound). Dates are uncertain for 4 of the 11 sites.
 - **Next:** ground checks with local journalists and lagoon authorities, marsh detection and a flood model.
 
-
-## Files and how to run
-- **One-page write-up:** [`WRITEUP.pdf`](WRITEUP.pdf). **Every number recomputed:** [`RESULTS.ipynb`](RESULTS.ipynb). **French brief for Abidjan:** [`docs/BRIEF_FR.pdf`](docs/BRIEF_FR.pdf).
-- **Abidjan sites (CSV with map links):** [`outputs/abidjan/abidjan_sites.csv`](outputs/abidjan/abidjan_sites.csv). **Interactive map:** [`outputs/abidjan/abidjan_map.html`](outputs/abidjan/abidjan_map.html).
-- **Code:** `run.py` (one entry point) and the `ghostlakes/` package. **Unit tests:** `python -m pytest -q`.
-- **Setup, every command and the full test table:** [`HOW_TO_RUN.md`](HOW_TO_RUN.md).
-
 [^1]: [The News Minute (Parliament committee report)](https://www.thenewsminute.com/article/did-chennai-learn-any-lessons-2015-floods-70597)
 [^2]: [The Hans India](https://www.thehansindia.com/news/cities/hyderabad/hyderabad-encroachers-threaten-to-gobble-up-kappala-cheruvu-691917)
 [^3]: [Gulf News (government probe)](https://gulfnews.com/world/oceania/owners-failings-led-to-factory-collapse-1.1187447)
