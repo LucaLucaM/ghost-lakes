@@ -5,5 +5,10 @@ scikit-learn
 folium
 matplotlib
 pillow
+# report (PDFs + notebook) and tests
 markdown
 pypdf
+nbformat
+nbclient
+ipykernel
+pytest

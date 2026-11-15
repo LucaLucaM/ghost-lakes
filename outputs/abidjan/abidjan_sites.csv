@@ -1,0 +1,12 @@
+﻿site,neighbourhood,lat,lon,area_ha,optical_last_water,optical_land_from,radar_last_water,radar_land_from,radar_vv_2023_db,radar_vv_now_db,people_within_500m,map,dates_agree
+1,Vridi,5.27522,-3.99083,7.79,2024-03,2024-08,2024-06-10,2025-02-05,-20.4,-15.0,6394,https://www.openstreetmap.org/?mlat=5.27522&mlon=-3.99083#map=17/5.27522/-3.99083,False
+2,Les Grands Moulins,5.26943,-3.98017,7.55,2025-09,2025-11,2025-10-09,2025-10-15,-21.9,-17.3,8831,https://www.openstreetmap.org/?mlat=5.26943&mlon=-3.98017#map=17/5.26943/-3.98017,True
+3,"Zone 3, Abidjan",5.28327,-3.99504,5.12,2024-11,2026-02,2025-07-17,2025-11-14,-20.1,-12.4,4098,https://www.openstreetmap.org/?mlat=5.28327&mlon=-3.99504#map=17/5.28327/-3.99504,True
+4,Les Grands Moulins,5.28057,-3.98714,3.17,2024-11,2025-09,2024-04-11,2024-04-23,-21.2,-16.2,9009,https://www.openstreetmap.org/?mlat=5.28057&mlon=-3.98714#map=17/5.28057/-3.98714,False
+5,"Koumassi, Abidjan",5.28781,-3.94406,2.55,2023-05,2024-04,2023-12-13,2024-03-30,-19.9,-8.7,19410,https://www.openstreetmap.org/?mlat=5.28781&mlon=-3.94406#map=17/5.28781/-3.94406,True
+6,"Vridi, Abidjan",5.28075,-3.99254,1.82,2024-05,2024-09,2024-08-09,2024-09-14,-21.1,-16.2,2214,https://www.openstreetmap.org/?mlat=5.28075&mlon=-3.99254#map=17/5.28075/-3.99254,True
+7,"M’pouto, Abidjan",5.32119,-3.95786,1.36,2024-03,2025-12,2024-11-01,2024-11-13,-20.0,-15.6,1581,https://www.openstreetmap.org/?mlat=5.32119&mlon=-3.95786#map=17/5.32119/-3.95786,False
+8,"Koumassi, Abidjan",5.28042,-3.9568,1.23,2026-03,2026-07,2026-04-07,2026-04-19,-18.2,-13.5,16952,https://www.openstreetmap.org/?mlat=5.28042&mlon=-3.95680#map=17/5.28042/-3.95680,True
+9,"Koumassi, Abidjan",5.2802,-3.95897,1.03,2023-05,2023-10,2023-10-14,2023-11-07,-18.4,-11.2,17677,https://www.openstreetmap.org/?mlat=5.28020&mlon=-3.95897#map=17/5.28020/-3.95897,True
+10,Petit Bassam,5.26424,-3.97234,0.77,2026-02,2026-07,2026-03-14,2026-04-13,-21.6,-14.2,5269,https://www.openstreetmap.org/?mlat=5.26424&mlon=-3.97234#map=17/5.26424/-3.97234,True
+11,"Vridi, Abidjan",5.27928,-3.99748,0.65,2024-01,2024-04,2025-05-06,2025-12-26,-19.5,-14.3,4551,https://www.openstreetmap.org/?mlat=5.27928&mlon=-3.99748#map=17/5.27928/-3.99748,False

@@ -4,7 +4,8 @@ __pycache__/
 *.pyc
 
 # Generated intermediates
-WRITEUP.html
+*.html
+!outputs/**/*.html
 *.tmp
 
 # Run logs and scratch lists

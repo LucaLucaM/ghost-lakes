@@ -1,0 +1,30 @@
+city,lat,lon,area_ha,label,note
+abidjan,5.2752,-3.99089,7.79,infill,"Ébrié lagoon fill (sand platforms), checked optical+radar"
+abidjan,5.26934,-3.98023,6.95,infill,"Ébrié lagoon fill (sand platforms), checked optical+radar"
+abidjan,5.28321,-3.99506,4.69,infill,"Ébrié lagoon fill (sand platforms), checked optical+radar"
+abidjan,5.28035,-3.98726,2.66,infill,"Ébrié lagoon fill (sand platforms), checked optical+radar"
+abidjan,5.28773,-3.94403,2.66,infill,"Ébrié lagoon fill (sand platforms), checked optical+radar"
+abidjan,5.28068,-3.99256,1.79,infill,"Ébrié lagoon fill (sand platforms), checked optical+radar"
+abidjan,5.32126,-3.958,1.39,infill,"Ébrié lagoon fill (sand platforms), checked optical+radar"
+abidjan,5.26417,-3.97234,1.11,infill,"Ébrié lagoon fill (sand platforms), checked optical+radar"
+colombo,6.95213,79.82634,15.13,infill,port / Port City reclamation
+colombo,6.95508,79.84122,7.65,infill,port / Port City reclamation
+dakar,14.68682,-17.41917,14.94,infill,port extension into the sea
+lima,-11.9769,-77.13643,1.17,natural,beach / coastline change
+lima,-12.10482,-77.06615,1.09,natural,beach / coastline change
+manila,14.54633,120.96771,181.06,infill,Manila Bay reclamation / port extension
+manila,14.53226,120.9718,45.16,infill,Manila Bay reclamation / port extension
+manila,14.53782,120.9665,12.44,infill,Manila Bay reclamation / port extension
+manila,14.61188,120.94684,3.94,infill,Manila Bay reclamation / port extension
+manila,14.53486,120.96847,3.4,infill,Manila Bay reclamation / port extension
+manila,14.5531,120.94889,2.59,infill,Manila Bay reclamation / port extension
+manila,14.54856,120.95394,2.55,infill,Manila Bay reclamation / port extension
+manila,14.54628,120.95053,1.97,infill,Manila Bay reclamation / port extension
+manila,14.5545,120.93605,1.27,infill,Manila Bay reclamation / port extension
+manila,14.55416,120.9731,1.12,infill,Manila Bay reclamation / port extension
+phnom_penh,11.54209,104.96794,2.66,infill,riverside channel filled
+rajshahi,24.35019,88.51856,9.09,natural,Padma river channel moved
+ro_bucuresti,44.47419,26.08216,1.22,drained,"Herastrau lake drained for works, June 2026 (temporary, documented)"
+vijayawada,16.46538,80.65519,2.33,natural,Krishna river sand bar
+vijayawada,16.49357,80.62382,1.45,natural,Krishna river sand bar
+yangon,16.7658,96.22015,1.34,infill,pond filled inside a housing estate (Star City)

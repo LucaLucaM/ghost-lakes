@@ -1,0 +1,379 @@
+{
+ "area_independent_ha": {
+  "1": {
+   "inside": {
+    "refl_ha": 7.755410105133023,
+    "radar_ha": 7.0036099594116115,
+    "both_ha": 7.0036099594116115
+   },
+   "grown": {
+    "refl_ha": 9.881785929903538,
+    "radar_ha": 9.03467207036333,
+    "both_ha": 8.81246850463864
+   }
+  },
+  "2": {
+   "inside": {
+    "refl_ha": 7.518067827606178,
+    "radar_ha": 6.578309532928445,
+    "both_ha": 6.578309532928445
+   },
+   "grown": {
+    "refl_ha": 9.457675193125299,
+    "radar_ha": 8.667736285403304,
+    "both_ha": 8.082893624479967
+   }
+  },
+  "3": {
+   "inside": {
+    "refl_ha": 5.054801654815644,
+    "radar_ha": 5.0844775985717465,
+    "both_ha": 5.054801654815644
+   },
+   "grown": {
+    "refl_ha": 7.097592870255976,
+    "radar_ha": 7.45971645921291,
+    "both_ha": 6.944325392919771
+   }
+  },
+  "4": {
+   "inside": {
+    "refl_ha": 3.1555549049377465,
+    "radar_ha": 2.8093341484069825,
+    "both_ha": 2.8093341484069825
+   },
+   "grown": {
+    "refl_ha": 4.7494498418620905,
+    "radar_ha": 4.587453421409449,
+    "both_ha": 4.185604665928267
+   }
+  },
+  "5": {
+   "inside": {
+    "refl_ha": 2.54222064285278,
+    "radar_ha": 2.54222064285278,
+    "both_ha": 2.54222064285278
+   },
+   "grown": {
+    "refl_ha": 4.012623828720387,
+    "radar_ha": 4.1173226134266585,
+    "both_ha": 3.8882960452988553
+   }
+  },
+  "6": {
+   "inside": {
+    "refl_ha": 1.8102394721984856,
+    "radar_ha": 1.6915351509094232,
+    "both_ha": 1.6915351509094232
+   },
+   "grown": {
+    "refl_ha": 2.8389704871981736,
+    "radar_ha": 2.4450352106131743,
+    "both_ha": 2.387118414387421
+   }
+  },
+  "7": {
+   "inside": {
+    "refl_ha": 1.3551201972961433,
+    "radar_ha": 1.0682699935913091,
+    "both_ha": 1.0682699935913091
+   },
+   "grown": {
+    "refl_ha": 2.0424746758105705,
+    "radar_ha": 1.6466642020730413,
+    "both_ha": 1.5399923029162839
+   }
+  },
+  "8": {
+   "inside": {
+    "refl_ha": 0.9100661697387693,
+    "radar_ha": 0.9793104034423824,
+    "both_ha": 0.7715778541564937
+   },
+   "grown": {
+    "refl_ha": 1.472437138025619,
+    "radar_ha": 1.3735948474270707,
+    "both_ha": 0.9200745302357393
+   }
+  },
+  "9": {
+   "inside": {
+    "refl_ha": 1.018878833007813,
+    "radar_ha": 0.8902825424194342,
+    "both_ha": 0.880390519714356
+   },
+   "grown": {
+    "refl_ha": 1.6726835673493028,
+    "radar_ha": 1.3776299161514576,
+    "both_ha": 1.159850079579072
+   }
+  },
+  "10": {
+   "inside": {
+    "refl_ha": 0.7715974571228034,
+    "radar_ha": 0.7715974571228034,
+    "both_ha": 0.7715974571228034
+   },
+   "grown": {
+    "refl_ha": 1.6364150640599877,
+    "radar_ha": 1.7312256718863706,
+    "both_ha": 1.63443660687615
+   }
+  },
+  "11": {
+   "inside": {
+    "refl_ha": 0.6429827102661132,
+    "radar_ha": 0.6330906707763672,
+    "both_ha": 0.6330906707763672
+   },
+   "grown": {
+    "refl_ha": 1.6739664030426635,
+    "radar_ha": 1.5786924966460592,
+    "both_ha": 1.5369519368459665
+   }
+  }
+ },
+ "totals_ha": {
+  "dw": 33.04,
+  "refl": 46.54,
+  "radar": 44.02
+ },
+ "inside_polygon_ha": {
+  "dw": 33.04,
+  "refl": 32.53,
+  "radar": 30.05,
+  "both": 29.8
+ },
+ "threshold_grid": [
+  {
+   "then_water": 0.6,
+   "now_water": 0.1,
+   "land": 0.4,
+   "area_ha": 33.34
+  },
+  {
+   "then_water": 0.6,
+   "now_water": 0.1,
+   "land": 0.5,
+   "area_ha": 33.1
+  },
+  {
+   "then_water": 0.6,
+   "now_water": 0.1,
+   "land": 0.6,
+   "area_ha": 26.43
+  },
+  {
+   "then_water": 0.6,
+   "now_water": 0.2,
+   "land": 0.4,
+   "area_ha": 41.58
+  },
+  {
+   "then_water": 0.6,
+   "now_water": 0.2,
+   "land": 0.5,
+   "area_ha": 39.88
+  },
+  {
+   "then_water": 0.6,
+   "now_water": 0.2,
+   "land": 0.6,
+   "area_ha": 27.14
+  },
+  {
+   "then_water": 0.6,
+   "now_water": 0.3,
+   "land": 0.4,
+   "area_ha": 46.69
+  },
+  {
+   "then_water": 0.6,
+   "now_water": 0.3,
+   "land": 0.5,
+   "area_ha": 40.88
+  },
+  {
+   "then_water": 0.6,
+   "now_water": 0.3,
+   "land": 0.6,
+   "area_ha": 27.14
+  },
+  {
+   "then_water": 0.7,
+   "now_water": 0.1,
+   "land": 0.4,
+   "area_ha": 25.42
+  },
+  {
+   "then_water": 0.7,
+   "now_water": 0.1,
+   "land": 0.5,
+   "area_ha": 25.36
+  },
+  {
+   "then_water": 0.7,
+   "now_water": 0.1,
+   "land": 0.6,
+   "area_ha": 19.81
+  },
+  {
+   "then_water": 0.7,
+   "now_water": 0.2,
+   "land": 0.4,
+   "area_ha": 32.19
+  },
+  {
+   "then_water": 0.7,
+   "now_water": 0.2,
+   "land": 0.5,
+   "area_ha": 30.86
+  },
+  {
+   "then_water": 0.7,
+   "now_water": 0.2,
+   "land": 0.6,
+   "area_ha": 20.61
+  },
+  {
+   "then_water": 0.7,
+   "now_water": 0.3,
+   "land": 0.4,
+   "area_ha": 35.8
+  },
+  {
+   "then_water": 0.7,
+   "now_water": 0.3,
+   "land": 0.5,
+   "area_ha": 30.99
+  },
+  {
+   "then_water": 0.7,
+   "now_water": 0.3,
+   "land": 0.6,
+   "area_ha": 20.61
+  },
+  {
+   "then_water": 0.8,
+   "now_water": 0.1,
+   "land": 0.4,
+   "area_ha": 0
+  },
+  {
+   "then_water": 0.8,
+   "now_water": 0.1,
+   "land": 0.5,
+   "area_ha": 0
+  },
+  {
+   "then_water": 0.8,
+   "now_water": 0.1,
+   "land": 0.6,
+   "area_ha": 0
+  },
+  {
+   "then_water": 0.8,
+   "now_water": 0.2,
+   "land": 0.4,
+   "area_ha": 0
+  },
+  {
+   "then_water": 0.8,
+   "now_water": 0.2,
+   "land": 0.5,
+   "area_ha": 0
+  },
+  {
+   "then_water": 0.8,
+   "now_water": 0.2,
+   "land": 0.6,
+   "area_ha": 0
+  },
+  {
+   "then_water": 0.8,
+   "now_water": 0.3,
+   "land": 0.4,
+   "area_ha": 0
+  },
+  {
+   "then_water": 0.8,
+   "now_water": 0.3,
+   "land": 0.5,
+   "area_ha": 0
+  },
+  {
+   "then_water": 0.8,
+   "now_water": 0.3,
+   "land": 0.6,
+   "area_ha": 0
+  }
+ ],
+ "radar_dates": {
+  "1": {
+   "base_db": -20.2,
+   "radar_last_water": "2024-06-10",
+   "radar_land_from": "2025-02-05",
+   "n_obs": 186
+  },
+  "2": {
+   "base_db": -21.9,
+   "radar_last_water": "2025-10-09",
+   "radar_land_from": "2025-10-15",
+   "n_obs": 186
+  },
+  "3": {
+   "base_db": -20.0,
+   "radar_last_water": "2025-07-17",
+   "radar_land_from": "2025-11-14",
+   "n_obs": 187
+  },
+  "4": {
+   "base_db": -21.2,
+   "radar_last_water": "2024-04-11",
+   "radar_land_from": "2024-04-23",
+   "n_obs": 186
+  },
+  "5": {
+   "base_db": -19.8,
+   "radar_last_water": "2023-12-13",
+   "radar_land_from": "2024-03-30",
+   "n_obs": 186
+  },
+  "6": {
+   "base_db": -21.2,
+   "radar_last_water": "2024-08-09",
+   "radar_land_from": "2024-09-14",
+   "n_obs": 186
+  },
+  "7": {
+   "base_db": -20.0,
+   "radar_last_water": "2024-11-01",
+   "radar_land_from": "2024-11-13",
+   "n_obs": 186
+  },
+  "8": {
+   "base_db": -18.4,
+   "radar_last_water": "2026-04-07",
+   "radar_land_from": "2026-04-19",
+   "n_obs": 186
+  },
+  "9": {
+   "base_db": -18.1,
+   "radar_last_water": "2023-10-14",
+   "radar_land_from": "2023-11-07",
+   "n_obs": 186
+  },
+  "10": {
+   "base_db": -21.6,
+   "radar_last_water": "2026-03-14",
+   "radar_land_from": "2026-04-13",
+   "n_obs": 186
+  },
+  "11": {
+   "base_db": -19.3,
+   "radar_last_water": "2025-05-06",
+   "radar_land_from": "2025-12-26",
+   "n_obs": 186
+  }
+ }
+}

@@ -1,0 +1,1 @@
+{"n_per_class": 1500, "features": ["elev", "slope", "rel300", "rel1k", "rel3k", "above_min1k", "hand", "log_upa", "twi", "dist_river"], "scale": 30, "seed": 42}
