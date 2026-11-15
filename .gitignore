@@ -1,0 +1,18 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Generated intermediates
+WRITEUP.html
+*.tmp
+
+# Run logs and scratch lists
+outputs/*.log
+outputs/run.log
+outputs/ri_log*.txt
+outputs/ri_chunk*.txt
+outputs/vanished_run*.log
+
+# Local editor / tool config
+.claude/

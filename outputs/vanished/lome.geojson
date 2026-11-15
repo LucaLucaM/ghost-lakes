@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "columns": {"area_ha": "Number", "built": "Float", "early_wet_years": "Float<-9.223372036854776E18, 9.223372036854776E18>", "lat": "Object", "lon": "Object", "mean": "Float<-9.223372036854776E18, 9.223372036854776E18>", "system:index": "String", "zone": "Byte<0, 1>"}, "features": []}

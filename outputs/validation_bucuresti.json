@@ -1,0 +1,79 @@
+{
+  "city": "bucuresti",
+  "trained_on": [
+    "timisoara",
+    "iasi",
+    "cluj",
+    "galati",
+    "craiova",
+    "oradea"
+  ],
+  "random_land_median_p": 0.10666407644748688,
+  "sites": [
+    {
+      "site": "Balta Icoanei (Lacul Bulindroi)",
+      "lat": 44.4452,
+      "lon": 26.106,
+      "note": "Grădina Icoanei; drained 1873",
+      "group": "vanished",
+      "p_water": 0.1268717497587204,
+      "percentile": 56.13333333333333
+    },
+    {
+      "site": "Balta de la Carvasara (Lacul Șuțu)",
+      "lat": 44.4335,
+      "lon": 26.106,
+      "note": "behind Colțea Hospital",
+      "group": "vanished",
+      "p_water": 0.04770507663488388,
+      "percentile": 21.8
+    },
+    {
+      "site": "Pârâul Dâmbovicioara (Calea Rahovei)",
+      "lat": 44.4262,
+      "lon": 26.0935,
+      "note": "buried stream, Dealul Spirii -> Unirii",
+      "group": "vanished",
+      "p_water": 0.17853157222270966,
+      "percentile": 69.93333333333334
+    },
+    {
+      "site": "Pârâul Bucureștioara (Colțea -> Unirii)",
+      "lat": 44.43,
+      "lon": 26.1045,
+      "note": "buried stream, now in pipes",
+      "group": "vanished",
+      "p_water": 0.24657562375068665,
+      "percentile": 80.13333333333334
+    },
+    {
+      "site": "Balta lui Dura (Cișmigiu marsh)",
+      "lat": 44.437,
+      "lon": 26.0905,
+      "note": "swamp, garden after 1854; small lake remains",
+      "group": "lake_remains",
+      "p_water": 0.3990291953086853,
+      "percentile": 92.26666666666667
+    },
+    {
+      "site": "Balta Cocioc (Tineretului)",
+      "lat": 44.406,
+      "lon": 26.108,
+      "note": "swamp/garbage dump, park lake built later",
+      "group": "lake_remains",
+      "p_water": 0.49999845027923584,
+      "percentile": 95.86666666666666
+    }
+  ],
+  "sources": [
+    "https://www.bucharest.ro/articles/the-bucurestioara-stream-where-does-the-vanished-tributary-of-the-dambovita-flow-today-1498",
+    "https://skia.one.ro/en/blog/the-waters-that-shape-bucharest/",
+    "https://en.wikipedia.org/wiki/Lake_Ci%C8%99migiu"
+  ],
+  "auc_vanished": 0.57,
+  "n_vanished": 4,
+  "auc_lake_remains": 0.941,
+  "n_lake_remains": 2,
+  "auc_all": 0.694,
+  "n_all": 6
+}

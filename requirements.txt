@@ -1,0 +1,9 @@
+earthengine-api
+numpy
+pandas
+scikit-learn
+folium
+matplotlib
+pillow
+markdown
+pypdf

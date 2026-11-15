@@ -1,0 +1,62 @@
+{
+ "1": {
+  "vv_before_db": -20.4,
+  "vv_after_db": -16.3,
+  "radar_confirms": true
+ },
+ "2": {
+  "vv_before_db": -21.9,
+  "vv_after_db": -17.6,
+  "radar_confirms": true
+ },
+ "3": {
+  "vv_before_db": -20.1,
+  "vv_after_db": -15.2,
+  "radar_confirms": true
+ },
+ "4": {
+  "vv_before_db": -21.2,
+  "vv_after_db": -16.7,
+  "radar_confirms": true
+ },
+ "5": {
+  "vv_before_db": -19.9,
+  "vv_after_db": -12.6,
+  "radar_confirms": true
+ },
+ "6": {
+  "vv_before_db": -21.1,
+  "vv_after_db": -17.2,
+  "radar_confirms": true
+ },
+ "7": {
+  "vv_before_db": -20.0,
+  "vv_after_db": -15.9,
+  "radar_confirms": true
+ },
+ "8": {
+  "vv_before_db": -18.2,
+  "vv_after_db": -13.7,
+  "radar_confirms": true
+ },
+ "9": {
+  "vv_before_db": -18.4,
+  "vv_after_db": -12.3,
+  "radar_confirms": true
+ },
+ "10": {
+  "vv_before_db": -21.6,
+  "vv_after_db": -14.8,
+  "radar_confirms": true
+ },
+ "11": {
+  "vv_before_db": -19.5,
+  "vv_after_db": -15.8,
+  "radar_confirms": true
+ },
+ "12": {
+  "vv_before_db": -21.9,
+  "vv_after_db": -23.4,
+  "radar_confirms": false
+ }
+}

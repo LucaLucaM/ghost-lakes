@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9916df96bf1115edcca1f1a77ac6855b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9916df96bf1115edcca1f1a77ac6855b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9916df96bf1115edcca1f1a77ac6855b = L.map(
+                "map_9916df96bf1115edcca1f1a77ac6855b",
+                {
+                    center: [44.435, 26.1],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_86eea55836956de39fa33b3bbfbfd732 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_86eea55836956de39fa33b3bbfbfd732.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var tile_layer_4b0dd64c059c375ea940659b315d76ec = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4b0dd64c059c375ea940659b315d76ec.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var tile_layer_d685378a72d5a87b95b4753b66b28877 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/3468be7f803739abc52300aa6bc16b1e-8f15a9b497c26388c83c489a8d38084e/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_9d85d83404dd926b1d2bda4ca3dab4b5 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/c6c9cf4534394bd5c1b59b4c8beac988-b1aa436e1835a315339cecc6314f78d6/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9d85d83404dd926b1d2bda4ca3dab4b5.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var tile_layer_09a3d3757058c72d283f00bc750c9366 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/d3bce9a27712e962f134f44a224f6535-622bf1bc2b1bb881325eb4bb0cdaf7ee/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_5330db4de4f4214e97748a0a00f1d797 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/f1472bd3c3843cb189443e29140a4f17-bf787f12663ae2b67d448863426c1260/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_645603374f9511583c31373b42f76476 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/66e67c0618c7b2cd76e2b1c55115d081-3e14d1761a475ae875d913c276990956/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_673b016b7e2ea50671d1ec94f3b2ab01 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/b239914dec804e6d1fdf9c27c6e1c6d2-e045b567c6d5ba5297c2c8d836d0ccb1/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_673b016b7e2ea50671d1ec94f3b2ab01.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var tile_layer_871df275ea356c680070c71136c0dc30 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/f73abd083ca0c611c01b64176aa63fc1-ea5c9ac24ee99df3d1bbaef3806341ae/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_d34f68cf397d9aed15a94bf5f0d76a0d = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/14a5495fe2ef4be19f28c6a6fcd16273-25b12c4bc580e4054d01ba14a990c814/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_3ab5f1709e1caa0f73e6cc84bfa06ac5 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/2b397b5e5695e33e5d530058b0e2b4aa-98e12e32ed4d3fb6c5a8d277fe9e8cf8/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_e48d5a35868304012ba3c5f8b73ee8c5 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/4549bdda79cf246ec40de112c50bb1ab-d063c9730e38ac6424499b2a1149e15c/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e48d5a35868304012ba3c5f8b73ee8c5.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var tile_layer_33fe18514b0d2582223038702f95a1c0 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/8b72ecfcaa808769a0b44fda96320e1f-1f250ba726b3fe16a61e4a2a8f7ad020/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_9bbee217201974c85e555bab5c36742c = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/d5bb2d32ed9cf571404bbb802ffad64a-367b3c42100423b5a5103c07211912d6/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_aa5a108efa95600de01a2c5bafb78884 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/d7b2e49b2d0eb6fdb91c4d185d0bdc7e-78af96d3ca65b912c0f580d5bbd20f9a/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_5c6c8ad19a7bfdae91e939c0f1c3aa4b = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/601d31f307d0e62a38fda3c7994c03f9-5f46e7b69a7b8eee775a98ab61b73e54/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5c6c8ad19a7bfdae91e939c0f1c3aa4b.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var tile_layer_cef8e650dd8d13948bc8a75052f87496 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/3ee402408093407bb1615df3023b0beb-b8fe87d2e263bc2fea4daf1cc824e05f/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_693bf40aacb5e602b6bcd5c8af93bc0b = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/ccee97eb826e5c614c8f284095348e25-ea77970dd19833281c239064c35aec38/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_45c5ec73666c1999a59225e2e2e4565a = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/44699d46254fbee4968d64c44a4d51cd-56370190ef0be5abe55917a41a38a8a7/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_e0f9e5aa482ede60d297db6e0b4432d7 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/5fa01629c8dbfa0211939952bbf4eb59-f05ac60c53f7453e4a406cfb4ec238b3/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e0f9e5aa482ede60d297db6e0b4432d7.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var tile_layer_8d56ae8c3840e4c396487fbeff83802a = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/257ae73bfce706f2fc1a013e31b82d07-0f8fcd221263d558a50ad99833c04975/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_d12d9f08554ce7944e22eafb52374f6a = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/aea0ff9d2e90fdfdee438d46e3d47880-3f1a7c5051404a15237f011f9fc136ac/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_2acf91be37f24d21c5dd785a7d03560d = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/3bbed8c23d8bdf2cb494a47f9f0df8db-7df955b555cae8e8f441f0d99d899e02/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_8a8352c6e471108bf4917f7f25a87725 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/006932691575980caba7e40ec3e269e1-f1ba88941f2f7cabdd808b1c7623b8a3/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8a8352c6e471108bf4917f7f25a87725.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var tile_layer_71b755afb2bfa023e781397a74ae8976 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/5406b1689fe199c14ae6ba82ce7f7b0c-97053fa674ec1c467a51049d7bde241b/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_62d2364d809a007fd42c38854080ccc3 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/d1749f1cd62b08f9595b030aad91bfc2-2b2ac0931df4943859f5201f87bdbc2c/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_244bb04d036df7fab9a1c16a5227dbc0 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/45061887512768aef48b19c1c392572d-5dbbf46de3dc8e8574b34edeb85472bb/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_154faecd440218cbaac3b21b887cd99b = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/84e9abf072ba9408b487e37fecf4c0de-8a5cb197eec238ed5e498022e16752a2/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_154faecd440218cbaac3b21b887cd99b.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var tile_layer_a3cd82b70c973a2ffd5d467e19cbcdec = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/2dd93178a83cc5acede94452a15fa012-143dd8f281316339f09af07164a51cbc/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_8ffda3c2b2941b8c8b8eb93cbd3070f9 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/lootlake/maps/713c95957a15af18f432ea1e6f432491-30bbb4109ee6b1293c3ca6dcf8f045be/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var feature_group_ad3f9529146c9a7c3552997fee86bb8a = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_e17730c783157d1034dc171fd2b8d725_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_e17730c783157d1034dc171fd2b8d725_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e17730c783157d1034dc171fd2b8d725 = L.geoJson(null, {
+                onEachFeature: geo_json_e17730c783157d1034dc171fd2b8d725_onEachFeature,
+            
+                style: geo_json_e17730c783157d1034dc171fd2b8d725_styler,
+            ...{
+}
+        });
+
+        function geo_json_e17730c783157d1034dc171fd2b8d725_add (data) {
+            geo_json_e17730c783157d1034dc171fd2b8d725
+                .addData(data);
+        }
+            geo_json_e17730c783157d1034dc171fd2b8d725_add({"features": [{"geometry": {"coordinates": [[[26.103245525945052, 44.45420981299546], [26.10351502053029, 44.45420981299546], [26.10351502053029, 44.4544793075807], [26.103784515115525, 44.4544793075807], [26.103784515115525, 44.4552877913364], [26.104592998871233, 44.4552877913364], [26.104592998871233, 44.45636576967735], [26.104323504285997, 44.45636576967735], [26.104323504285997, 44.45663526426258], [26.10405400970076, 44.45663526426258], [26.10405400970076, 44.45717425343305], [26.103784515115525, 44.45717425343305], [26.103784515115525, 44.457982737188765], [26.102976031359816, 44.457982737188765], [26.102976031359816, 44.45852172635923], [26.103245525945052, 44.45852172635923], [26.103245525945052, 44.45879122094447], [26.103784515115525, 44.45879122094447], [26.103784515115525, 44.45852172635923], [26.10405400970076, 44.45852172635923], [26.10405400970076, 44.457982737188765], [26.104592998871233, 44.457982737188765], [26.104592998871233, 44.45879122094447], [26.103784515115525, 44.45879122094447], [26.103784515115525, 44.45933021011494], [26.103245525945052, 44.45933021011494], [26.103245525945052, 44.459599704700175], [26.10270653677458, 44.459599704700175], [26.10270653677458, 44.45933021011494], [26.102437042189344, 44.45933021011494], [26.102437042189344, 44.4590607155297], [26.10270653677458, 44.4590607155297], [26.10270653677458, 44.45879122094447], [26.102167547604108, 44.45879122094447], [26.102167547604108, 44.457713242603525], [26.10270653677458, 44.457713242603525], [26.10270653677458, 44.457982737188765], [26.102976031359816, 44.457982737188765], [26.102976031359816, 44.45717425343305], [26.103784515115525, 44.45717425343305], [26.103784515115525, 44.45636576967735], [26.10270653677458, 44.45636576967735], [26.10270653677458, 44.45609627509211], [26.102437042189344, 44.45609627509211], [26.102437042189344, 44.45636576967735], [26.102167547604108, 44.45636576967735], [26.102167547604108, 44.45609627509211], [26.10162855843364, 44.45609627509211], [26.10162855843364, 44.45501829675117], [26.101359063848403, 44.45501829675117], [26.101359063848403, 44.4544793075807], [26.102437042189344, 44.4544793075807], [26.102437042189344, 44.45420981299546], [26.10270653677458, 44.45420981299546], [26.10270653677458, 44.4544793075807], [26.103245525945052, 44.4544793075807], [26.103245525945052, 44.45420981299546]], [[26.102976031359816, 44.4590607155297], [26.102976031359816, 44.45933021011494], [26.10270653677458, 44.45933021011494], [26.10270653677458, 44.4590607155297], [26.102976031359816, 44.4590607155297]], [[26.102976031359816, 44.45474880216593], [26.102976031359816, 44.4552877913364], [26.101898053018875, 44.4552877913364], [26.101898053018875, 44.45501829675117], [26.102167547604108, 44.45501829675117], [26.102167547604108, 44.45474880216593], [26.102976031359816, 44.45474880216593]]], "geodesic": false, "type": "Polygon"}, "id": "+96860-164955", "properties": {"area_ha": 6.666066524829478, "elev": 78.82962429962846, "hand": 0.38129200632838683, "lat": 44.45656785498205, "lon": 26.10313409260243, "mean": 0.7817710529153163, "rank_score": 2.018433321886535, "rel1k": -2.6503127827024913, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e17730c783157d1034dc171fd2b8d725.addTo(feature_group_ad3f9529146c9a7c3552997fee86bb8a);
+        
+    
+            var marker_8229698b634322f300c5adecb5489d8c = L.marker(
+                [44.45656785498205, 26.10313409260243],
+                {
+}
+            ).addTo(feature_group_ad3f9529146c9a7c3552997fee86bb8a);
+        
+    
+            var div_icon_ca11d93363f4cae05124e47668351a33 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_2a1c7255098189c24dd18be3fa9a639d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_eab58c685e70ffe67412675317f3c855 = $(`<div id="html_eab58c685e70ffe67412675317f3c855" style="width: 100.0%; height: 100.0%;"><b>#1 bucuresti</b><br>suprafață: 6.7 ha<br>scor ghost: 0.78<br>HAND: 0.4 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_2a1c7255098189c24dd18be3fa9a639d.setContent(html_eab58c685e70ffe67412675317f3c855);
+            
+        
+
+        marker_8229698b634322f300c5adecb5489d8c.bindPopup(popup_2a1c7255098189c24dd18be3fa9a639d)
+        ;
+
+        
+    
+    
+            marker_8229698b634322f300c5adecb5489d8c.bindTooltip(
+                `<div>
+                     #1 bucuresti
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8229698b634322f300c5adecb5489d8c.setIcon(div_icon_ca11d93363f4cae05124e47668351a33);
+            
+    
+        function geo_json_1fce87eb95ca51a6e0b99d9b6b243d76_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_1fce87eb95ca51a6e0b99d9b6b243d76_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_1fce87eb95ca51a6e0b99d9b6b243d76 = L.geoJson(null, {
+                onEachFeature: geo_json_1fce87eb95ca51a6e0b99d9b6b243d76_onEachFeature,
+            
+                style: geo_json_1fce87eb95ca51a6e0b99d9b6b243d76_styler,
+            ...{
+}
+        });
+
+        function geo_json_1fce87eb95ca51a6e0b99d9b6b243d76_add (data) {
+            geo_json_1fce87eb95ca51a6e0b99d9b6b243d76
+                .addData(data);
+        }
+            geo_json_1fce87eb95ca51a6e0b99d9b6b243d76_add({"features": [{"geometry": {"coordinates": [[[26.09030978585373, 44.41782804398862], [26.09111826960944, 44.41782804398862], [26.09111826960944, 44.4199840006705], [26.090848775024202, 44.4199840006705], [26.090848775024202, 44.42025349525574], [26.090579280438966, 44.42025349525574], [26.090579280438966, 44.4199840006705], [26.09030978585373, 44.4199840006705], [26.09030978585373, 44.41971450608527], [26.08977079668326, 44.41971450608527], [26.08977079668326, 44.4191755169148], [26.08923180751279, 44.4191755169148], [26.08923180751279, 44.41971450608527], [26.087884334586608, 44.41971450608527], [26.087884334586608, 44.4191755169148], [26.088153829171844, 44.4191755169148], [26.088153829171844, 44.418636527744326], [26.088692818342317, 44.418636527744326], [26.088692818342317, 44.418906022329566], [26.088962312927553, 44.418906022329566], [26.088962312927553, 44.418636527744326], [26.090040291268494, 44.418636527744326], [26.090040291268494, 44.418906022329566], [26.09030978585373, 44.418906022329566], [26.09030978585373, 44.41782804398862]], [[26.090848775024202, 44.41971450608527], [26.090848775024202, 44.4199840006705], [26.090579280438966, 44.4199840006705], [26.090579280438966, 44.41971450608527], [26.090848775024202, 44.41971450608527]]], "geodesic": false, "type": "Polygon"}, "id": "+96814-164820", "properties": {"area_ha": 3.3351741397292507, "elev": 70.72206993555336, "hand": 0.6725625005808042, "lat": 44.41906150041376, "lon": 26.08983817404345, "mean": 0.7467845196907337, "rank_score": 1.3638121779950856, "rel1k": -3.79213597228741, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_1fce87eb95ca51a6e0b99d9b6b243d76.addTo(feature_group_ad3f9529146c9a7c3552997fee86bb8a);
+        
+    
+            var marker_41a4ebb2683fbf1dc3b20673d432eb53 = L.marker(
+                [44.41906150041376, 26.08983817404345],
+                {
+}
+            ).addTo(feature_group_ad3f9529146c9a7c3552997fee86bb8a);
+        
+    
+            var div_icon_a8fab7b52aaafafbe96be31b9e1fe1b3 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e2\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_49efe38e2be4851387f10eeaccd0ca12 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_086067da4410b2d852fde45bc8827796 = $(`<div id="html_086067da4410b2d852fde45bc8827796" style="width: 100.0%; height: 100.0%;"><b>#2 bucuresti</b><br>suprafață: 3.3 ha<br>scor ghost: 0.75<br>HAND: 0.7 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_49efe38e2be4851387f10eeaccd0ca12.setContent(html_086067da4410b2d852fde45bc8827796);
+            
+        
+
+        marker_41a4ebb2683fbf1dc3b20673d432eb53.bindPopup(popup_49efe38e2be4851387f10eeaccd0ca12)
+        ;
+
+        
+    
+    
+            marker_41a4ebb2683fbf1dc3b20673d432eb53.bindTooltip(
+                `<div>
+                     #2 bucuresti
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_41a4ebb2683fbf1dc3b20673d432eb53.setIcon(div_icon_a8fab7b52aaafafbe96be31b9e1fe1b3);
+            
+    
+        function geo_json_00f7b9d6a3ea0f6f6093a41c1950aec8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_00f7b9d6a3ea0f6f6093a41c1950aec8_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_00f7b9d6a3ea0f6f6093a41c1950aec8 = L.geoJson(null, {
+                onEachFeature: geo_json_00f7b9d6a3ea0f6f6093a41c1950aec8_onEachFeature,
+            
+                style: geo_json_00f7b9d6a3ea0f6f6093a41c1950aec8_styler,
+            ...{
+}
+        });
+
+        function geo_json_00f7b9d6a3ea0f6f6093a41c1950aec8_add (data) {
+            geo_json_00f7b9d6a3ea0f6f6093a41c1950aec8
+                .addData(data);
+        }
+            geo_json_00f7b9d6a3ea0f6f6093a41c1950aec8_add({"features": [{"geometry": {"coordinates": [[[26.080338486200006, 44.428877321983286], [26.08114696995571, 44.428877321983286], [26.08114696995571, 44.429685805739], [26.083033432052364, 44.429685805739], [26.083033432052364, 44.4304942894947], [26.08195545371142, 44.4304942894947], [26.08195545371142, 44.43130277325041], [26.08114696995571, 44.43130277325041], [26.08114696995571, 44.429685805739], [26.080338486200006, 44.429685805739], [26.080338486200006, 44.42995530032423], [26.079799497029533, 44.42995530032423], [26.079799497029533, 44.429685805739], [26.080338486200006, 44.429685805739], [26.080338486200006, 44.428877321983286]]], "geodesic": false, "type": "Polygon"}, "id": "+96777-164861", "properties": {"area_ha": 2.629157486997717, "elev": 73.1782738378071, "hand": 0.31677442493281566, "lat": 44.43007689904178, "lon": 26.081577497579772, "mean": 0.7863623848775538, "rank_score": 1.2750612039013514, "rel1k": -2.7766938904826035, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_00f7b9d6a3ea0f6f6093a41c1950aec8.addTo(feature_group_ad3f9529146c9a7c3552997fee86bb8a);
+        
+    
+            var marker_90078438959a79dfd92e8702dcd3a122 = L.marker(
+                [44.43007689904178, 26.081577497579772],
+                {
+}
+            ).addTo(feature_group_ad3f9529146c9a7c3552997fee86bb8a);
+        
+    
+            var div_icon_0b02c1f99ba4ad0374e45b58a67ff2e3 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e3\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_d29c10a7d8f1bf2082442bb9a6e5530a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2f42390c1f15f1e08b7a4fceedb209cf = $(`<div id="html_2f42390c1f15f1e08b7a4fceedb209cf" style="width: 100.0%; height: 100.0%;"><b>#3 bucuresti</b><br>suprafață: 2.6 ha<br>scor ghost: 0.79<br>HAND: 0.3 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_d29c10a7d8f1bf2082442bb9a6e5530a.setContent(html_2f42390c1f15f1e08b7a4fceedb209cf);
+            
+        
+
+        marker_90078438959a79dfd92e8702dcd3a122.bindPopup(popup_d29c10a7d8f1bf2082442bb9a6e5530a)
+        ;
+
+        
+    
+    
+            marker_90078438959a79dfd92e8702dcd3a122.bindTooltip(
+                `<div>
+                     #3 bucuresti
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90078438959a79dfd92e8702dcd3a122.setIcon(div_icon_0b02c1f99ba4ad0374e45b58a67ff2e3);
+            
+    
+            feature_group_ad3f9529146c9a7c3552997fee86bb8a.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var feature_group_79bf4da665566c165c4505431f0e6ce3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_79bf4da665566c165c4505431f0e6ce3.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var feature_group_f2a81e897cc9e3a260cf8fafaf2732ed = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_37b2c91392a233e794e97828b9239c46_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_37b2c91392a233e794e97828b9239c46_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_37b2c91392a233e794e97828b9239c46 = L.geoJson(null, {
+                onEachFeature: geo_json_37b2c91392a233e794e97828b9239c46_onEachFeature,
+            
+                style: geo_json_37b2c91392a233e794e97828b9239c46_styler,
+            ...{
+}
+        });
+
+        function geo_json_37b2c91392a233e794e97828b9239c46_add (data) {
+            geo_json_37b2c91392a233e794e97828b9239c46
+                .addData(data);
+        }
+            geo_json_37b2c91392a233e794e97828b9239c46_add({"features": [{"geometry": {"coordinates": [[[27.5895081635208, 47.17287118885478], [27.5895081635208, 47.172601694269545], [27.590047152691273, 47.172601694269545], [27.590047152691273, 47.172332199684305], [27.59031664727651, 47.172332199684305], [27.59031664727651, 47.17206270509907], [27.591125131032214, 47.17206270509907], [27.591125131032214, 47.1715237159286], [27.59085563644698, 47.1715237159286], [27.59085563644698, 47.17125422134336], [27.591125131032214, 47.17125422134336], [27.591125131032214, 47.170445737587656], [27.59139462561745, 47.170445737587656], [27.59139462561745, 47.16990674841718], [27.591125131032214, 47.16990674841718], [27.591125131032214, 47.16963725383195], [27.59139462561745, 47.16963725383195], [27.59139462561745, 47.16990674841718], [27.591664120202687, 47.16990674841718], [27.591664120202687, 47.170445737587656], [27.59220310937316, 47.170445737587656], [27.59220310937316, 47.17017624300242], [27.591933614787923, 47.17017624300242], [27.591933614787923, 47.16963725383195], [27.59220310937316, 47.16963725383195], [27.59220310937316, 47.168559275491006], [27.592472603958395, 47.168559275491006], [27.592472603958395, 47.168020286320534], [27.59274209854363, 47.168020286320534], [27.59274209854363, 47.16882877007624], [27.593011593128868, 47.16882877007624], [27.593011593128868, 47.168559275491006], [27.59355058229934, 47.168559275491006], [27.59355058229934, 47.168289780905766], [27.593820076884576, 47.168289780905766], [27.593820076884576, 47.168020286320534], [27.593011593128868, 47.168020286320534], [27.593011593128868, 47.16667281339436], [27.593281087714104, 47.16667281339436], [27.593281087714104, 47.16640331880912], [27.593011593128868, 47.16640331880912], [27.593011593128868, 47.166133824223884], [27.593281087714104, 47.166133824223884], [27.593281087714104, 47.16640331880912], [27.59355058229934, 47.16640331880912], [27.59355058229934, 47.166133824223884], [27.59543704439599, 47.166133824223884], [27.59543704439599, 47.16532534046817], [27.595167549810753, 47.16532534046817], [27.595167549810753, 47.16505584588294], [27.59543704439599, 47.16505584588294], [27.59543704439599, 47.16478635129771], [27.595167549810753, 47.16478635129771], [27.595167549810753, 47.16451685671247], [27.59543704439599, 47.16451685671247], [27.59543704439599, 47.16370837295676], [27.596245528151698, 47.16370837295676], [27.596245528151698, 47.16343887837152], [27.596515022736934, 47.16343887837152], [27.596515022736934, 47.16370837295676], [27.597054011907403, 47.16370837295676], [27.597054011907403, 47.16236090003058], [27.59678451732217, 47.16236090003058], [27.59678451732217, 47.16289988920105], [27.596245528151698, 47.16289988920105], [27.596245528151698, 47.16236090003058], [27.596515022736934, 47.16236090003058], [27.596515022736934, 47.162091405445345], [27.597054011907403, 47.162091405445345], [27.597054011907403, 47.16128292168964], [27.59867097941882, 47.16128292168964], [27.59867097941882, 47.16074393251917], [27.598940474004056, 47.16074393251917], [27.598940474004056, 47.16047443793393], [27.59947946317453, 47.16047443793393], [27.59947946317453, 47.15858797583728], [27.599748957759765, 47.15858797583728], [27.599748957759765, 47.15885747042252], [27.600018452344997, 47.15885747042252], [27.600018452344997, 47.15912696500775], [27.600287946930234, 47.15912696500775], [27.600287946930234, 47.15777949208157], [27.601096430685942, 47.15777949208157], [27.601096430685942, 47.157509997496334], [27.60136592527118, 47.157509997496334], [27.60136592527118, 47.1572405029111], [27.601635419856414, 47.1572405029111], [27.601635419856414, 47.15697100832586], [27.602174409026887, 47.15697100832586], [27.602174409026887, 47.157509997496334], [27.60190491444165, 47.157509997496334], [27.60190491444165, 47.15777949208157], [27.602174409026887, 47.15777949208157], [27.602174409026887, 47.158048986666806], [27.60190491444165, 47.158048986666806], [27.60190491444165, 47.158318481252046], [27.601635419856414, 47.158318481252046], [27.601635419856414, 47.15858797583728], [27.60136592527118, 47.15858797583728], [27.60136592527118, 47.160204943348695], [27.601096430685942, 47.160204943348695], [27.601096430685942, 47.15966595417822], [27.600826936100706, 47.15966595417822], [27.600826936100706, 47.159935448763456], [27.600287946930234, 47.159935448763456], [27.600287946930234, 47.16047443793393], [27.59947946317453, 47.16047443793393], [27.59947946317453, 47.162091405445345], [27.59867097941882, 47.162091405445345], [27.59867097941882, 47.16289988920105], [27.59786249566311, 47.16289988920105], [27.59786249566311, 47.16370837295676], [27.597054011907403, 47.16370837295676], [27.597054011907403, 47.16532534046817], [27.596245528151698, 47.16532534046817], [27.596245528151698, 47.166133824223884], [27.59543704439599, 47.166133824223884], [27.59543704439599, 47.16721180256483], [27.59462856064028, 47.16721180256483], [27.59462856064028, 47.16963725383195], [27.593820076884576, 47.16963725383195], [27.593820076884576, 47.16990674841718], [27.59408957146981, 47.16990674841718], [27.59408957146981, 47.17017624300242], [27.593820076884576, 47.17017624300242], [27.593820076884576, 47.170445737587656], [27.59220310937316, 47.170445737587656], [27.59220310937316, 47.17206270509907], [27.591125131032214, 47.17206270509907], [27.591125131032214, 47.17287118885478], [27.59031664727651, 47.17287118885478], [27.59031664727651, 47.17367967261049], [27.5895081635208, 47.17367967261049], [27.5895081635208, 47.174488156366195], [27.588699679765092, 47.174488156366195], [27.588699679765092, 47.1752966401219], [27.587891196009387, 47.1752966401219], [27.587891196009387, 47.17610512387761], [27.58762170142415, 47.17610512387761], [27.58762170142415, 47.176374618462845], [27.58708271225368, 47.176374618462845], [27.58708271225368, 47.17691360763332], [27.586813217668443, 47.17691360763332], [27.586813217668443, 47.17718310221855], [27.58627422849797, 47.17718310221855], [27.58627422849797, 47.178530575144734], [27.585735239327498, 47.178530575144734], [27.585735239327498, 47.17880006972997], [27.584926755571793, 47.17880006972997], [27.584926755571793, 47.179069564315206], [27.584657260986557, 47.179069564315206], [27.584657260986557, 47.17933905890044], [27.584118271816084, 47.17933905890044], [27.584118271816084, 47.17960855348568], [27.583579282645612, 47.17960855348568], [27.583579282645612, 47.17933905890044], [27.58384877723085, 47.17933905890044], [27.58384877723085, 47.178261080559494], [27.584118271816084, 47.178261080559494], [27.584118271816084, 47.17799158597426], [27.584657260986557, 47.17799158597426], [27.584657260986557, 47.17745259680379], [27.585196250157026, 47.17745259680379], [27.585196250157026, 47.17718310221855], [27.58546574474226, 47.17718310221855], [27.58546574474226, 47.176374618462845], [27.58627422849797, 47.176374618462845], [27.58627422849797, 47.1752966401219], [27.58708271225368, 47.1752966401219], [27.58708271225368, 47.174488156366195], [27.58762170142415, 47.174488156366195], [27.58762170142415, 47.174218661780955], [27.587891196009387, 47.174218661780955], [27.587891196009387, 47.17367967261049], [27.588699679765092, 47.17367967261049], [27.588699679765092, 47.17287118885478], [27.5895081635208, 47.17287118885478]], [[27.59031664727651, 47.172601694269545], [27.59031664727651, 47.17287118885478], [27.590047152691273, 47.17287118885478], [27.590047152691273, 47.172601694269545], [27.59031664727651, 47.172601694269545]], [[27.593820076884576, 47.16936775924671], [27.593820076884576, 47.16963725383195], [27.593011593128868, 47.16963725383195], [27.593011593128868, 47.16936775924671], [27.593820076884576, 47.16936775924671]], [[27.59274209854363, 47.16882877007624], [27.59274209854363, 47.16963725383195], [27.592472603958395, 47.16963725383195], [27.592472603958395, 47.16882877007624], [27.59274209854363, 47.16882877007624]], [[27.59462856064028, 47.16640331880912], [27.59462856064028, 47.16694230797959], [27.594359066055045, 47.16694230797959], [27.594359066055045, 47.16640331880912], [27.59462856064028, 47.16640331880912]], [[27.596245528151698, 47.164247362127234], [27.596245528151698, 47.16532534046817], [27.59543704439599, 47.16532534046817], [27.59543704439599, 47.16505584588294], [27.595706538981226, 47.16505584588294], [27.595706538981226, 47.16478635129771], [27.59543704439599, 47.16478635129771], [27.59543704439599, 47.16451685671247], [27.595706538981226, 47.16451685671247], [27.595706538981226, 47.164247362127234], [27.596245528151698, 47.164247362127234]], [[27.59786249566311, 47.16155241627487], [27.59786249566311, 47.162091405445345], [27.59732350649264, 47.162091405445345], [27.59732350649264, 47.16155241627487], [27.59786249566311, 47.16155241627487]], [[27.600287946930234, 47.15939645959298], [27.600287946930234, 47.15966595417822], [27.599748957759765, 47.15966595417822], [27.599748957759765, 47.15939645959298], [27.600287946930234, 47.15939645959298]], [[27.5895081635208, 47.17367967261049], [27.58896917435033, 47.17367967261049], [27.58896917435033, 47.17341017802525], [27.5895081635208, 47.17341017802525], [27.5895081635208, 47.17367967261049]]], "geodesic": false, "type": "Polygon"}, "id": "+102421-174984", "properties": {"area_ha": 27.77739742223265, "elev": 47.424992266582315, "hand": 1.3614974425978827, "lat": 47.168557145936035, "lon": 27.593137481775617, "mean": 0.8013608925945156, "rank_score": 4.223513831145789, "rel1k": -7.056143131132835, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_37b2c91392a233e794e97828b9239c46.addTo(feature_group_f2a81e897cc9e3a260cf8fafaf2732ed);
+        
+    
+            var marker_91a15613d836f334706646a4eaaf12e0 = L.marker(
+                [47.168557145936035, 27.593137481775617],
+                {
+}
+            ).addTo(feature_group_f2a81e897cc9e3a260cf8fafaf2732ed);
+        
+    
+            var div_icon_18135b8b9a0e1796d7161049e18c4132 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_240d749c2fd4ffd52aafbf7992e069e2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_40b5d2c08d3cf4fa2435e9ffd18eb4db = $(`<div id="html_40b5d2c08d3cf4fa2435e9ffd18eb4db" style="width: 100.0%; height: 100.0%;"><b>#1 iasi</b><br>suprafață: 27.8 ha<br>scor ghost: 0.80<br>HAND: 1.4 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_240d749c2fd4ffd52aafbf7992e069e2.setContent(html_40b5d2c08d3cf4fa2435e9ffd18eb4db);
+            
+        
+
+        marker_91a15613d836f334706646a4eaaf12e0.bindPopup(popup_240d749c2fd4ffd52aafbf7992e069e2)
+        ;
+
+        
+    
+    
+            marker_91a15613d836f334706646a4eaaf12e0.bindTooltip(
+                `<div>
+                     #1 iasi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_91a15613d836f334706646a4eaaf12e0.setIcon(div_icon_18135b8b9a0e1796d7161049e18c4132);
+            
+    
+        function geo_json_c629e077788b8cb50c8730c0d0e4e848_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_c629e077788b8cb50c8730c0d0e4e848_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c629e077788b8cb50c8730c0d0e4e848 = L.geoJson(null, {
+                onEachFeature: geo_json_c629e077788b8cb50c8730c0d0e4e848_onEachFeature,
+            
+                style: geo_json_c629e077788b8cb50c8730c0d0e4e848_styler,
+            ...{
+}
+        });
+
+        function geo_json_c629e077788b8cb50c8730c0d0e4e848_add (data) {
+            geo_json_c629e077788b8cb50c8730c0d0e4e848
+                .addData(data);
+        }
+            geo_json_c629e077788b8cb50c8730c0d0e4e848_add({"features": [{"geometry": {"coordinates": [[[27.576302928844243, 47.132716495654634], [27.57657242342948, 47.132716495654634], [27.57657242342948, 47.133255484825106], [27.57711141259995, 47.133255484825106], [27.57711141259995, 47.13379447399558], [27.578728380111368, 47.13379447399558], [27.578728380111368, 47.13460295775129], [27.579267369281837, 47.13460295775129], [27.579267369281837, 47.13487245233652], [27.579536863867073, 47.13487245233652], [27.579536863867073, 47.135141946921756], [27.57980635845231, 47.135141946921756], [27.57980635845231, 47.135411441506996], [27.579536863867073, 47.135411441506996], [27.579536863867073, 47.1362199252627], [27.580075853037545, 47.1362199252627], [27.580075853037545, 47.13648941984794], [27.57980635845231, 47.13648941984794], [27.57980635845231, 47.13675891443317], [27.58034534762278, 47.13675891443317], [27.58034534762278, 47.13648941984794], [27.580614842208018, 47.13648941984794], [27.580614842208018, 47.13702840901841], [27.58115383137849, 47.13702840901841], [27.58115383137849, 47.137567398188885], [27.581423325963726, 47.137567398188885], [27.581423325963726, 47.13783689277412], [27.581962315134195, 47.13783689277412], [27.581962315134195, 47.137297903603645], [27.582770798889904, 47.137297903603645], [27.582770798889904, 47.13648941984794], [27.583309788060376, 47.13648941984794], [27.583309788060376, 47.13675891443317], [27.58304029347514, 47.13675891443317], [27.58304029347514, 47.13702840901841], [27.583579282645612, 47.13702840901841], [27.583579282645612, 47.137297903603645], [27.58384877723085, 47.137297903603645], [27.58384877723085, 47.137567398188885], [27.583579282645612, 47.137567398188885], [27.583579282645612, 47.137297903603645], [27.58304029347514, 47.137297903603645], [27.58304029347514, 47.13783689277412], [27.581962315134195, 47.13783689277412], [27.581962315134195, 47.13810638735935], [27.58223180971943, 47.13810638735935], [27.58223180971943, 47.13837588194459], [27.581692820548962, 47.13837588194459], [27.581692820548962, 47.13864537652982], [27.581962315134195, 47.13864537652982], [27.581962315134195, 47.139184365700295], [27.581692820548962, 47.139184365700295], [27.581692820548962, 47.13891487111506], [27.581423325963726, 47.13891487111506], [27.581423325963726, 47.139453860285535], [27.58115383137849, 47.139453860285535], [27.58115383137849, 47.13972335487077], [27.580884336793254, 47.13972335487077], [27.580884336793254, 47.13999284945601], [27.58115383137849, 47.13999284945601], [27.58115383137849, 47.14026234404124], [27.581423325963726, 47.14026234404124], [27.581423325963726, 47.14053183862648], [27.58115383137849, 47.14053183862648], [27.58115383137849, 47.14080133321171], [27.580884336793254, 47.14080133321171], [27.580884336793254, 47.141340322382185], [27.580614842208018, 47.141340322382185], [27.580614842208018, 47.14160981696742], [27.580884336793254, 47.14160981696742], [27.580884336793254, 47.14187931155266], [27.580075853037545, 47.14187931155266], [27.580075853037545, 47.14160981696742], [27.57980635845231, 47.14160981696742], [27.57980635845231, 47.141070827796945], [27.579536863867073, 47.141070827796945], [27.579536863867073, 47.141340322382185], [27.578728380111368, 47.141340322382185], [27.578728380111368, 47.14214880613789], [27.578458885526132, 47.14214880613789], [27.578458885526132, 47.14241830072313], [27.5789978746966, 47.14241830072313], [27.5789978746966, 47.14268779530836], [27.579267369281837, 47.14268779530836], [27.579267369281837, 47.1429572898936], [27.578728380111368, 47.1429572898936], [27.578728380111368, 47.14376577364931], [27.578458885526132, 47.14376577364931], [27.578458885526132, 47.1429572898936], [27.578189390940896, 47.1429572898936], [27.578189390940896, 47.14268779530836], [27.578458885526132, 47.14268779530836], [27.578458885526132, 47.14241830072313], [27.57791989635566, 47.14241830072313], [27.57791989635566, 47.1429572898936], [27.577380907185187, 47.1429572898936], [27.577380907185187, 47.14241830072313], [27.57711141259995, 47.14241830072313], [27.57711141259995, 47.14268779530836], [27.576841918014715, 47.14268779530836], [27.576841918014715, 47.143226784478834], [27.57657242342948, 47.143226784478834], [27.57657242342948, 47.143496279064074], [27.576302928844243, 47.143496279064074], [27.576302928844243, 47.14376577364931], [27.57657242342948, 47.14376577364931], [27.57657242342948, 47.14403526823454], [27.576841918014715, 47.14403526823454], [27.576841918014715, 47.14376577364931], [27.57711141259995, 47.14376577364931], [27.57711141259995, 47.14403526823454], [27.576841918014715, 47.14403526823454], [27.576841918014715, 47.14430476281978], [27.57657242342948, 47.14430476281978], [27.57657242342948, 47.14457425740501], [27.576033434259006, 47.14457425740501], [27.576033434259006, 47.14430476281978], [27.575763939673774, 47.14430476281978], [27.575763939673774, 47.14403526823454], [27.575494445088538, 47.14403526823454], [27.575494445088538, 47.14457425740501], [27.57468596133283, 47.14457425740501], [27.57468596133283, 47.145652235745956], [27.574955455918065, 47.145652235745956], [27.574955455918065, 47.14726920325737], [27.57468596133283, 47.14726920325737], [27.57468596133283, 47.14699970867213], [27.574146972162357, 47.14699970867213], [27.574146972162357, 47.1467302140869], [27.57387747757712, 47.1467302140869], [27.57387747757712, 47.14726920325737], [27.573607982991884, 47.14726920325737], [27.573607982991884, 47.147538697842606], [27.57387747757712, 47.147538697842606], [27.57387747757712, 47.14807768701308], [27.573607982991884, 47.14807768701308], [27.573607982991884, 47.14834718159832], [27.57387747757712, 47.14834718159832], [27.57387747757712, 47.14861667618355], [27.573068993821412, 47.14861667618355], [27.573068993821412, 47.14834718159832], [27.573338488406648, 47.14834718159832], [27.573338488406648, 47.147808192427846], [27.573068993821412, 47.147808192427846], [27.573068993821412, 47.14807768701308], [27.57279949923618, 47.14807768701308], [27.57279949923618, 47.147538697842606], [27.572530004650943, 47.147538697842606], [27.572530004650943, 47.147808192427846], [27.57199101548047, 47.147808192427846], [27.57199101548047, 47.14807768701308], [27.571721520895235, 47.14807768701308], [27.571721520895235, 47.14834718159832], [27.57199101548047, 47.14834718159832], [27.57199101548047, 47.14861667618355], [27.571182531724762, 47.14861667618355], [27.571182531724762, 47.14888617076879], [27.570913037139526, 47.14888617076879], [27.570913037139526, 47.14915566535402], [27.571182531724762, 47.14915566535402], [27.571182531724762, 47.149694654524495], [27.569835058798585, 47.149694654524495], [27.569835058798585, 47.14996414910973], [27.56956556421335, 47.14996414910973], [27.56956556421335, 47.1505031382802], [27.56875708045764, 47.1505031382802], [27.56875708045764, 47.15104212745067], [27.56956556421335, 47.15104212745067], [27.56956556421335, 47.15131162203591], [27.56794859670193, 47.15131162203591], [27.56794859670193, 47.15212010579162], [27.567140112946223, 47.15212010579162], [27.567140112946223, 47.15292858954732], [27.566601123775754, 47.15292858954732], [27.566601123775754, 47.15319808413256], [27.56633162919052, 47.15319808413256], [27.56633162919052, 47.153737073303034], [27.56552314543481, 47.153737073303034], [27.56552314543481, 47.15400656788827], [27.564984156264337, 47.15400656788827], [27.564984156264337, 47.15427606247351], [27.5647146616791, 47.15427606247351], [27.5647146616791, 47.153737073303034], [27.56552314543481, 47.153737073303034], [27.56552314543481, 47.153467578717795], [27.565792640020046, 47.153467578717795], [27.565792640020046, 47.15319808413256], [27.56552314543481, 47.15319808413256], [27.56552314543481, 47.15292858954732], [27.565792640020046, 47.15292858954732], [27.565792640020046, 47.15319808413256], [27.566062134605282, 47.15319808413256], [27.566062134605282, 47.15292858954732], [27.56633162919052, 47.15292858954732], [27.56633162919052, 47.15265909496209], [27.566601123775754, 47.15265909496209], [27.566601123775754, 47.15238960037686], [27.56633162919052, 47.15238960037686], [27.56633162919052, 47.15212010579162], [27.567140112946223, 47.15212010579162], [27.567140112946223, 47.15131162203591], [27.56794859670193, 47.15131162203591], [27.56794859670193, 47.15077263286544], [27.568218091287168, 47.15077263286544], [27.568218091287168, 47.1505031382802], [27.56875708045764, 47.1505031382802], [27.56875708045764, 47.14996414910973], [27.569296069628113, 47.14996414910973], [27.569296069628113, 47.149694654524495], [27.569835058798585, 47.149694654524495], [27.569835058798585, 47.14942515993926], [27.570104553383818, 47.14942515993926], [27.570104553383818, 47.14915566535402], [27.56956556421335, 47.14915566535402], [27.56956556421335, 47.14888617076879], [27.570104553383818, 47.14888617076879], [27.570104553383818, 47.14915566535402], [27.570374047969054, 47.14915566535402], [27.570374047969054, 47.14888617076879], [27.57064354255429, 47.14888617076879], [27.57064354255429, 47.14861667618355], [27.571182531724762, 47.14861667618355], [27.571182531724762, 47.14834718159832], [27.57145202631, 47.14834718159832], [27.57145202631, 47.14807768701308], [27.571182531724762, 47.14807768701308], [27.571182531724762, 47.147808192427846], [27.57145202631, 47.147808192427846], [27.57145202631, 47.14807768701308], [27.571721520895235, 47.14807768701308], [27.571721520895235, 47.147808192427846], [27.57199101548047, 47.147808192427846], [27.57199101548047, 47.14699970867213], [27.572260510065707, 47.14699970867213], [27.572260510065707, 47.14726920325737], [27.572530004650943, 47.14726920325737], [27.572530004650943, 47.14699970867213], [27.57279949923618, 47.14699970867213], [27.57279949923618, 47.1467302140869], [27.573068993821412, 47.1467302140869], [27.573068993821412, 47.14619122491643], [27.573338488406648, 47.14619122491643], [27.573338488406648, 47.145921730331196], [27.574146972162357, 47.145921730331196], [27.574146972162357, 47.145113246575484], [27.574416466747593, 47.145113246575484], [27.574416466747593, 47.14457425740501], [27.57468596133283, 47.14457425740501], [27.57468596133283, 47.14430476281978], [27.574955455918065, 47.14430476281978], [27.574955455918065, 47.14403526823454], [27.5752249505033, 47.14403526823454], [27.5752249505033, 47.14376577364931], [27.575494445088538, 47.14376577364931], [27.575494445088538, 47.143226784478834], [27.574955455918065, 47.143226784478834], [27.574955455918065, 47.143496279064074], [27.57468596133283, 47.143496279064074], [27.57468596133283, 47.1429572898936], [27.576302928844243, 47.1429572898936], [27.576302928844243, 47.14214880613789], [27.57791989635566, 47.14214880613789], [27.57791989635566, 47.141340322382185], [27.578728380111368, 47.141340322382185], [27.578728380111368, 47.14053183862648], [27.58034534762278, 47.14053183862648], [27.58034534762278, 47.13864537652982], [27.579536863867073, 47.13864537652982], [27.579536863867073, 47.13837588194459], [27.580075853037545, 47.13837588194459], [27.580075853037545, 47.13810638735935], [27.57980635845231, 47.13810638735935], [27.57980635845231, 47.13783689277412], [27.578728380111368, 47.13783689277412], [27.578728380111368, 47.13702840901841], [27.577380907185187, 47.13702840901841], [27.577380907185187, 47.13648941984794], [27.57711141259995, 47.13648941984794], [27.57711141259995, 47.1362199252627], [27.57657242342948, 47.1362199252627], [27.57657242342948, 47.135411441506996], [27.576033434259006, 47.135411441506996], [27.576033434259006, 47.13460295775129], [27.576302928844243, 47.13460295775129], [27.576302928844243, 47.13379447399558], [27.575494445088538, 47.13379447399558], [27.575494445088538, 47.133524979410346], [27.575763939673774, 47.133524979410346], [27.575763939673774, 47.133255484825106], [27.575494445088538, 47.133255484825106], [27.575494445088538, 47.132985990239874], [27.576302928844243, 47.132985990239874], [27.576302928844243, 47.132716495654634]], [[27.570913037139526, 47.14915566535402], [27.570913037139526, 47.14942515993926], [27.57064354255429, 47.14942515993926], [27.57064354255429, 47.14915566535402], [27.570913037139526, 47.14915566535402]], [[27.573607982991884, 47.147538697842606], [27.573607982991884, 47.147808192427846], [27.573338488406648, 47.147808192427846], [27.573338488406648, 47.147538697842606], [27.573607982991884, 47.147538697842606]], [[27.57657242342948, 47.14403526823454], [27.57657242342948, 47.14430476281978], [27.576302928844243, 47.14430476281978], [27.576302928844243, 47.14403526823454], [27.57657242342948, 47.14403526823454]], [[27.576302928844243, 47.14376577364931], [27.576302928844243, 47.14403526823454], [27.576033434259006, 47.14403526823454], [27.576033434259006, 47.14376577364931], [27.576302928844243, 47.14376577364931]], [[27.58034534762278, 47.141340322382185], [27.58034534762278, 47.14160981696742], [27.580075853037545, 47.14160981696742], [27.580075853037545, 47.141340322382185], [27.58034534762278, 47.141340322382185]], [[27.580884336793254, 47.14053183862648], [27.580884336793254, 47.14080133321171], [27.580614842208018, 47.14080133321171], [27.580614842208018, 47.141340322382185], [27.58034534762278, 47.141340322382185], [27.58034534762278, 47.14053183862648], [27.580884336793254, 47.14053183862648]], [[27.58115383137849, 47.14026234404124], [27.58115383137849, 47.14053183862648], [27.580884336793254, 47.14053183862648], [27.580884336793254, 47.14026234404124], [27.58115383137849, 47.14026234404124]], [[27.581423325963726, 47.13783689277412], [27.581423325963726, 47.13810638735935], [27.58115383137849, 47.13810638735935], [27.58115383137849, 47.13783689277412], [27.581423325963726, 47.13783689277412]], [[27.57980635845231, 47.137297903603645], [27.57980635845231, 47.137567398188885], [27.579536863867073, 47.137567398188885], [27.579536863867073, 47.137297903603645], [27.57980635845231, 47.137297903603645]], [[27.580884336793254, 47.137297903603645], [27.580884336793254, 47.137567398188885], [27.580614842208018, 47.137567398188885], [27.580614842208018, 47.137297903603645], [27.580884336793254, 47.137297903603645]], [[27.579267369281837, 47.13702840901841], [27.579267369281837, 47.137297903603645], [27.5789978746966, 47.137297903603645], [27.5789978746966, 47.13702840901841], [27.579267369281837, 47.13702840901841]]], "geodesic": false, "type": "Polygon"}, "id": "+102326-174894", "properties": {"area_ha": 27.91389005098282, "elev": 45.86315952505088, "hand": 0.9401508648769622, "lat": 47.14114605283257, "lon": 27.576488528790406, "mean": 0.7721068955615521, "rank_score": 4.079318480317215, "rel1k": -2.8223441093496864, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c629e077788b8cb50c8730c0d0e4e848.addTo(feature_group_f2a81e897cc9e3a260cf8fafaf2732ed);
+        
+    
+            var marker_440cdea2e1c660ae315f0f770c704ca6 = L.marker(
+                [47.14114605283257, 27.576488528790406],
+                {
+}
+            ).addTo(feature_group_f2a81e897cc9e3a260cf8fafaf2732ed);
+        
+    
+            var div_icon_c1aa7b6ebbb6ea1e86c04545ecaf2a92 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e2\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_b344b12456238fba3e9d9368eb613a28 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4106958e9e62afefe5ad22ad5440f19d = $(`<div id="html_4106958e9e62afefe5ad22ad5440f19d" style="width: 100.0%; height: 100.0%;"><b>#2 iasi</b><br>suprafață: 27.9 ha<br>scor ghost: 0.77<br>HAND: 0.9 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_b344b12456238fba3e9d9368eb613a28.setContent(html_4106958e9e62afefe5ad22ad5440f19d);
+            
+        
+
+        marker_440cdea2e1c660ae315f0f770c704ca6.bindPopup(popup_b344b12456238fba3e9d9368eb613a28)
+        ;
+
+        
+    
+    
+            marker_440cdea2e1c660ae315f0f770c704ca6.bindTooltip(
+                `<div>
+                     #2 iasi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_440cdea2e1c660ae315f0f770c704ca6.setIcon(div_icon_c1aa7b6ebbb6ea1e86c04545ecaf2a92);
+            
+    
+        function geo_json_b4a787257cbaeb21cf6be19432dacb3d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_b4a787257cbaeb21cf6be19432dacb3d_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_b4a787257cbaeb21cf6be19432dacb3d = L.geoJson(null, {
+                onEachFeature: geo_json_b4a787257cbaeb21cf6be19432dacb3d_onEachFeature,
+            
+                style: geo_json_b4a787257cbaeb21cf6be19432dacb3d_styler,
+            ...{
+}
+        });
+
+        function geo_json_b4a787257cbaeb21cf6be19432dacb3d_add (data) {
+            geo_json_b4a787257cbaeb21cf6be19432dacb3d
+                .addData(data);
+        }
+            geo_json_b4a787257cbaeb21cf6be19432dacb3d_add({"features": [{"geometry": {"coordinates": [[[27.62723740545382, 47.15292858954732], [27.627506900039055, 47.15292858954732], [27.627506900039055, 47.153467578717795], [27.62777639462429, 47.153467578717795], [27.62777639462429, 47.15319808413256], [27.628045889209528, 47.15319808413256], [27.628045889209528, 47.153467578717795], [27.628854372965236, 47.153467578717795], [27.628854372965236, 47.15454555705874], [27.628045889209528, 47.15454555705874], [27.628045889209528, 47.15535404081445], [27.626967910868586, 47.15535404081445], [27.626967910868586, 47.156162524570156], [27.62454245960146, 47.156162524570156], [27.62454245960146, 47.15697100832586], [27.624003470430992, 47.15697100832586], [27.624003470430992, 47.1572405029111], [27.623733975845756, 47.1572405029111], [27.623733975845756, 47.157509997496334], [27.624003470430992, 47.157509997496334], [27.624003470430992, 47.15777949208157], [27.623733975845756, 47.15777949208157], [27.623733975845756, 47.158048986666806], [27.622925492090047, 47.158048986666806], [27.622925492090047, 47.15939645959298], [27.623194986675284, 47.15939645959298], [27.623194986675284, 47.15912696500775], [27.62346448126052, 47.15912696500775], [27.62346448126052, 47.15885747042252], [27.623733975845756, 47.15885747042252], [27.623733975845756, 47.15912696500775], [27.62346448126052, 47.15912696500775], [27.62346448126052, 47.15939645959298], [27.623194986675284, 47.15939645959298], [27.623194986675284, 47.15966595417822], [27.62211700833434, 47.15966595417822], [27.62211700833434, 47.16047443793393], [27.621578019163866, 47.16047443793393], [27.621578019163866, 47.16074393251917], [27.62130852457863, 47.16074393251917], [27.62130852457863, 47.16128292168964], [27.62076953540816, 47.16128292168964], [27.62076953540816, 47.16155241627487], [27.62130852457863, 47.16155241627487], [27.62130852457863, 47.16263039461582], [27.62076953540816, 47.16263039461582], [27.62076953540816, 47.162091405445345], [27.619691557067217, 47.162091405445345], [27.619691557067217, 47.16128292168964], [27.620500040822925, 47.16128292168964], [27.620500040822925, 47.160204943348695], [27.62076953540816, 47.160204943348695], [27.62076953540816, 47.159935448763456], [27.620500040822925, 47.159935448763456], [27.620500040822925, 47.15966595417822], [27.62076953540816, 47.15966595417822], [27.62076953540816, 47.159935448763456], [27.621039029993398, 47.159935448763456], [27.621039029993398, 47.15966595417822], [27.62211700833434, 47.15966595417822], [27.62211700833434, 47.158048986666806], [27.622925492090047, 47.158048986666806], [27.622925492090047, 47.15697100832586], [27.623733975845756, 47.15697100832586], [27.623733975845756, 47.15643201915539], [27.624003470430992, 47.15643201915539], [27.624003470430992, 47.156162524570156], [27.62454245960146, 47.156162524570156], [27.62454245960146, 47.15535404081445], [27.62535094335717, 47.15535404081445], [27.62535094335717, 47.15400656788827], [27.625620437942406, 47.15400656788827], [27.625620437942406, 47.15454555705874], [27.626159427112878, 47.15454555705874], [27.626159427112878, 47.15508454622921], [27.626428921698114, 47.15508454622921], [27.626428921698114, 47.15535404081445], [27.626967910868586, 47.15535404081445], [27.626967910868586, 47.15454555705874], [27.628045889209528, 47.15454555705874], [27.628045889209528, 47.153467578717795], [27.62777639462429, 47.153467578717795], [27.62777639462429, 47.153737073303034], [27.627506900039055, 47.153737073303034], [27.627506900039055, 47.15400656788827], [27.62723740545382, 47.15400656788827], [27.62723740545382, 47.15292858954732]], [[27.62669841628335, 47.155623535399684], [27.62669841628335, 47.15589302998492], [27.626428921698114, 47.15589302998492], [27.626428921698114, 47.155623535399684], [27.62669841628335, 47.155623535399684]], [[27.626428921698114, 47.15535404081445], [27.626428921698114, 47.155623535399684], [27.626159427112878, 47.155623535399684], [27.626159427112878, 47.15535404081445], [27.626428921698114, 47.15535404081445]]], "geodesic": false, "type": "Polygon"}, "id": "+102515-174969", "properties": {"area_ha": 9.52565623471253, "elev": 42.08457903924426, "hand": 1.0283153166103456, "lat": 47.15758071795378, "lon": 27.624021002427533, "mean": 0.7652296271079626, "rank_score": 2.3617788457093, "rel1k": -4.326934770370897, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_b4a787257cbaeb21cf6be19432dacb3d.addTo(feature_group_f2a81e897cc9e3a260cf8fafaf2732ed);
+        
+    
+            var marker_0d3d7f5c5e1cfb6bb28e25fd32b517aa = L.marker(
+                [47.15758071795378, 27.624021002427533],
+                {
+}
+            ).addTo(feature_group_f2a81e897cc9e3a260cf8fafaf2732ed);
+        
+    
+            var div_icon_ab3014ac1581b331704426af6b29a818 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e3\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_df245a45d317b039d91e8347c7242738 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_762b72534abef4db0211da0597dda4eb = $(`<div id="html_762b72534abef4db0211da0597dda4eb" style="width: 100.0%; height: 100.0%;"><b>#3 iasi</b><br>suprafață: 9.5 ha<br>scor ghost: 0.77<br>HAND: 1.0 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_df245a45d317b039d91e8347c7242738.setContent(html_762b72534abef4db0211da0597dda4eb);
+            
+        
+
+        marker_0d3d7f5c5e1cfb6bb28e25fd32b517aa.bindPopup(popup_df245a45d317b039d91e8347c7242738)
+        ;
+
+        
+    
+    
+            marker_0d3d7f5c5e1cfb6bb28e25fd32b517aa.bindTooltip(
+                `<div>
+                     #3 iasi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d3d7f5c5e1cfb6bb28e25fd32b517aa.setIcon(div_icon_ab3014ac1581b331704426af6b29a818);
+            
+    
+        function geo_json_ff76d6f2f89c7c73fa849bb09d6caf47_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_ff76d6f2f89c7c73fa849bb09d6caf47_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ff76d6f2f89c7c73fa849bb09d6caf47 = L.geoJson(null, {
+                onEachFeature: geo_json_ff76d6f2f89c7c73fa849bb09d6caf47_onEachFeature,
+            
+                style: geo_json_ff76d6f2f89c7c73fa849bb09d6caf47_styler,
+            ...{
+}
+        });
+
+        function geo_json_ff76d6f2f89c7c73fa849bb09d6caf47_add (data) {
+            geo_json_ff76d6f2f89c7c73fa849bb09d6caf47
+                .addData(data);
+        }
+            geo_json_ff76d6f2f89c7c73fa849bb09d6caf47_add({"features": [{"geometry": {"coordinates": [[[27.578189390940896, 47.131099528143224], [27.578189390940896, 47.13136902272846], [27.577650401770423, 47.13136902272846], [27.577650401770423, 47.13056053897275], [27.577380907185187, 47.13056053897275], [27.577380907185187, 47.13002154980228], [27.57711141259995, 47.13002154980228], [27.57711141259995, 47.13136902272846], [27.577380907185187, 47.13136902272846], [27.577380907185187, 47.13190801189893], [27.577650401770423, 47.13190801189893], [27.577650401770423, 47.1324470010694], [27.57791989635566, 47.1324470010694], [27.57791989635566, 47.132985990239874], [27.577650401770423, 47.132985990239874], [27.577650401770423, 47.132716495654634], [27.577380907185187, 47.132716495654634], [27.577380907185187, 47.13217750648416], [27.57711141259995, 47.13217750648416], [27.57711141259995, 47.13190801189893], [27.576841918014715, 47.13190801189893], [27.576841918014715, 47.13136902272846], [27.57657242342948, 47.13136902272846], [27.57657242342948, 47.13056053897275], [27.576302928844243, 47.13056053897275], [27.576302928844243, 47.12948256063181], [27.57657242342948, 47.12948256063181], [27.57657242342948, 47.1286740768761], [27.576841918014715, 47.1286740768761], [27.576841918014715, 47.12813508770563], [27.57711141259995, 47.12813508770563], [27.57711141259995, 47.12786559312039], [27.577650401770423, 47.12786559312039], [27.577650401770423, 47.12975205521704], [27.57791989635566, 47.12975205521704], [27.57791989635566, 47.131099528143224], [27.578189390940896, 47.131099528143224]]], "geodesic": false, "type": "Polygon"}, "id": "+102330-174876", "properties": {"area_ha": 3.7266979658892625, "elev": 48.6197123114141, "hand": 1.1640024793281636, "lat": 47.130107672288595, "lon": 27.577184305270954, "mean": 0.8006242259604032, "rank_score": 1.5455776372909944, "rel1k": -3.815853207593233, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ff76d6f2f89c7c73fa849bb09d6caf47.addTo(feature_group_f2a81e897cc9e3a260cf8fafaf2732ed);
+        
+    
+            var marker_78e1530ba9b2c5ccab73e487de1d78a2 = L.marker(
+                [47.130107672288595, 27.577184305270954],
+                {
+}
+            ).addTo(feature_group_f2a81e897cc9e3a260cf8fafaf2732ed);
+        
+    
+            var div_icon_a59268f120f99414a68af87bd5519282 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e4\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_2f3cf0587abb7a9e3ad5b6e645d3c863 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_32d957e1ea4f5530e2626bfdd7c124c7 = $(`<div id="html_32d957e1ea4f5530e2626bfdd7c124c7" style="width: 100.0%; height: 100.0%;"><b>#4 iasi</b><br>suprafață: 3.7 ha<br>scor ghost: 0.80<br>HAND: 1.2 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_2f3cf0587abb7a9e3ad5b6e645d3c863.setContent(html_32d957e1ea4f5530e2626bfdd7c124c7);
+            
+        
+
+        marker_78e1530ba9b2c5ccab73e487de1d78a2.bindPopup(popup_2f3cf0587abb7a9e3ad5b6e645d3c863)
+        ;
+
+        
+    
+    
+            marker_78e1530ba9b2c5ccab73e487de1d78a2.bindTooltip(
+                `<div>
+                     #4 iasi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78e1530ba9b2c5ccab73e487de1d78a2.setIcon(div_icon_a59268f120f99414a68af87bd5519282);
+            
+    
+            feature_group_f2a81e897cc9e3a260cf8fafaf2732ed.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var feature_group_99be7169f5cf7dd961dc654ded5c6477 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_e554fe0d45bb6baf4bcbb0fab189a431_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_e554fe0d45bb6baf4bcbb0fab189a431_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e554fe0d45bb6baf4bcbb0fab189a431 = L.geoJson(null, {
+                onEachFeature: geo_json_e554fe0d45bb6baf4bcbb0fab189a431_onEachFeature,
+            
+                style: geo_json_e554fe0d45bb6baf4bcbb0fab189a431_styler,
+            ...{
+}
+        });
+
+        function geo_json_e554fe0d45bb6baf4bcbb0fab189a431_add (data) {
+            geo_json_e554fe0d45bb6baf4bcbb0fab189a431
+                .addData(data);
+        }
+            geo_json_e554fe0d45bb6baf4bcbb0fab189a431_add({"features": [{"geometry": {"coordinates": [[[23.637909060207438, 46.79369230742793], [23.63844804937791, 46.79369230742793], [23.63844804937791, 46.793961802013165], [23.638717543963146, 46.793961802013165], [23.638717543963146, 46.7942312965984], [23.63844804937791, 46.7942312965984], [23.63844804937791, 46.79450079118364], [23.638717543963146, 46.79450079118364], [23.638717543963146, 46.79477028576887], [23.63925653313362, 46.79477028576887], [23.63925653313362, 46.79450079118364], [23.639526027718855, 46.79450079118364], [23.639526027718855, 46.793961802013165], [23.64033451147456, 46.793961802013165], [23.64033451147456, 46.79450079118364], [23.640604006059796, 46.79450079118364], [23.640604006059796, 46.79530927493934], [23.639526027718855, 46.79530927493934], [23.639526027718855, 46.79477028576887], [23.63925653313362, 46.79477028576887], [23.63925653313362, 46.79503978035411], [23.638178554792674, 46.79503978035411], [23.638178554792674, 46.79530927493934], [23.63844804937791, 46.79530927493934], [23.63844804937791, 46.79557876952458], [23.639526027718855, 46.79557876952458], [23.639526027718855, 46.796117758695054], [23.64114299523027, 46.796117758695054], [23.64114299523027, 46.795848264109814], [23.641412489815504, 46.795848264109814], [23.641412489815504, 46.796117758695054], [23.641951478985977, 46.796117758695054], [23.641951478985977, 46.79638725328029], [23.640604006059796, 46.79638725328029], [23.640604006059796, 46.79692624245076], [23.639795522304087, 46.79692624245076], [23.639795522304087, 46.796656747865526], [23.639526027718855, 46.796656747865526], [23.639526027718855, 46.796117758695054], [23.636831081866493, 46.796117758695054], [23.636831081866493, 46.795848264109814], [23.63656158728126, 46.795848264109814], [23.63656158728126, 46.796117758695054], [23.63117169557654, 46.796117758695054], [23.63117169557654, 46.795848264109814], [23.630902200991304, 46.795848264109814], [23.630902200991304, 46.796117758695054], [23.630363211820836, 46.796117758695054], [23.630363211820836, 46.79530927493934], [23.63117169557654, 46.79530927493934], [23.63117169557654, 46.79450079118364], [23.631441190161777, 46.79450079118364], [23.631441190161777, 46.79530927493934], [23.631710684747013, 46.79530927493934], [23.631710684747013, 46.79557876952458], [23.63251916850272, 46.79557876952458], [23.63251916850272, 46.79530927493934], [23.632788663087958, 46.79530927493934], [23.632788663087958, 46.79557876952458], [23.63332765225843, 46.79557876952458], [23.63332765225843, 46.79503978035411], [23.633597146843666, 46.79503978035411], [23.633597146843666, 46.79477028576887], [23.6338666414289, 46.79477028576887], [23.6338666414289, 46.79530927493934], [23.637370071036965, 46.79530927493934], [23.637370071036965, 46.79503978035411], [23.6376395656222, 46.79503978035411], [23.6376395656222, 46.79450079118364], [23.637909060207438, 46.79450079118364], [23.637909060207438, 46.79369230742793]]], "geodesic": false, "type": "Polygon"}, "id": "+87713-173636", "properties": {"area_ha": 9.406018146025977, "elev": 324.5764248466301, "hand": 1.1602722627068192, "lat": 46.795500430156046, "lon": 23.63650961452081, "mean": 0.7742242805318895, "rank_score": 2.3744864371651313, "rel1k": -6.10999139506615, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e554fe0d45bb6baf4bcbb0fab189a431.addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var marker_41f376007626b7c40ff87f30615c0869 = L.marker(
+                [46.795500430156046, 23.63650961452081],
+                {
+}
+            ).addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var div_icon_99704334748f2443460710e91c389efb = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_d359ae477b20fd61b4f8d15b13f904f1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cb7bbdf617eac392c51e240d407adbb6 = $(`<div id="html_cb7bbdf617eac392c51e240d407adbb6" style="width: 100.0%; height: 100.0%;"><b>#1 cluj</b><br>suprafață: 9.4 ha<br>scor ghost: 0.77<br>HAND: 1.2 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_d359ae477b20fd61b4f8d15b13f904f1.setContent(html_cb7bbdf617eac392c51e240d407adbb6);
+            
+        
+
+        marker_41f376007626b7c40ff87f30615c0869.bindPopup(popup_d359ae477b20fd61b4f8d15b13f904f1)
+        ;
+
+        
+    
+    
+            marker_41f376007626b7c40ff87f30615c0869.bindTooltip(
+                `<div>
+                     #1 cluj
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_41f376007626b7c40ff87f30615c0869.setIcon(div_icon_99704334748f2443460710e91c389efb);
+            
+    
+        function geo_json_dde00cd2863b747936761783ccba2d60_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_dde00cd2863b747936761783ccba2d60_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_dde00cd2863b747936761783ccba2d60 = L.geoJson(null, {
+                onEachFeature: geo_json_dde00cd2863b747936761783ccba2d60_onEachFeature,
+            
+                style: geo_json_dde00cd2863b747936761783ccba2d60_styler,
+            ...{
+}
+        });
+
+        function geo_json_dde00cd2863b747936761783ccba2d60_add (data) {
+            geo_json_dde00cd2863b747936761783ccba2d60
+                .addData(data);
+        }
+            geo_json_dde00cd2863b747936761783ccba2d60_add({"features": [{"geometry": {"coordinates": [[[23.615541009632864, 46.79530927493934], [23.617157977144277, 46.79530927493934], [23.617157977144277, 46.795848264109814], [23.617966460899986, 46.795848264109814], [23.617966460899986, 46.79557876952458], [23.61877494465569, 46.79557876952458], [23.61877494465569, 46.79638725328029], [23.617966460899986, 46.79638725328029], [23.617966460899986, 46.796656747865526], [23.617427471729513, 46.796656747865526], [23.617427471729513, 46.79692624245076], [23.617157977144277, 46.79692624245076], [23.617157977144277, 46.797195737036], [23.61688848255904, 46.797195737036], [23.61688848255904, 46.79746523162123], [23.61634949338857, 46.79746523162123], [23.61634949338857, 46.797195737036], [23.61446303129192, 46.797195737036], [23.61446303129192, 46.797734726206464], [23.613924042121447, 46.797734726206464], [23.613924042121447, 46.79746523162123], [23.61365454753621, 46.79746523162123], [23.61365454753621, 46.797195737036], [23.612846063780502, 46.797195737036], [23.612846063780502, 46.79638725328029], [23.613385052950974, 46.79638725328029], [23.613385052950974, 46.796656747865526], [23.61365454753621, 46.796656747865526], [23.61365454753621, 46.796117758695054], [23.61446303129192, 46.796117758695054], [23.61446303129192, 46.795848264109814], [23.614732525877155, 46.795848264109814], [23.614732525877155, 46.79557876952458], [23.61500202046239, 46.79557876952458], [23.61500202046239, 46.795848264109814], [23.615271515047628, 46.795848264109814], [23.615271515047628, 46.796117758695054], [23.61500202046239, 46.796117758695054], [23.61500202046239, 46.796656747865526], [23.615271515047628, 46.796656747865526], [23.615271515047628, 46.79692624245076], [23.615541009632864, 46.79692624245076], [23.615541009632864, 46.796656747865526], [23.616618987973805, 46.796656747865526], [23.616618987973805, 46.796117758695054], [23.616079998803333, 46.796117758695054], [23.616079998803333, 46.795848264109814], [23.615541009632864, 46.795848264109814], [23.615541009632864, 46.79530927493934]], [[23.613924042121447, 46.796656747865526], [23.613924042121447, 46.79692624245076], [23.61365454753621, 46.79692624245076], [23.61365454753621, 46.796656747865526], [23.613924042121447, 46.796656747865526]], [[23.61500202046239, 46.796656747865526], [23.61500202046239, 46.79692624245076], [23.614732525877155, 46.79692624245076], [23.614732525877155, 46.796656747865526], [23.61500202046239, 46.796656747865526]]], "geodesic": false, "type": "Polygon"}, "id": "+87634-173642", "properties": {"area_ha": 5.594283222642759, "elev": 326.0605304974656, "hand": 1.6542497283510174, "lat": 46.7964509310549, "lon": 23.61582088352392, "mean": 0.7581523604445405, "rank_score": 1.7931999426099268, "rel1k": -3.307541398603287, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_dde00cd2863b747936761783ccba2d60.addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var marker_5f427455809ca505f33a077e5d4be744 = L.marker(
+                [46.7964509310549, 23.61582088352392],
+                {
+}
+            ).addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var div_icon_0cb99d98e33d41b75b01f11e1f154081 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e2\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_ccef03fe39ba69a988cbfa1d85c080ce = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_10cd2e4bb6488312510660b12df834e7 = $(`<div id="html_10cd2e4bb6488312510660b12df834e7" style="width: 100.0%; height: 100.0%;"><b>#2 cluj</b><br>suprafață: 5.6 ha<br>scor ghost: 0.76<br>HAND: 1.7 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_ccef03fe39ba69a988cbfa1d85c080ce.setContent(html_10cd2e4bb6488312510660b12df834e7);
+            
+        
+
+        marker_5f427455809ca505f33a077e5d4be744.bindPopup(popup_ccef03fe39ba69a988cbfa1d85c080ce)
+        ;
+
+        
+    
+    
+            marker_5f427455809ca505f33a077e5d4be744.bindTooltip(
+                `<div>
+                     #2 cluj
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5f427455809ca505f33a077e5d4be744.setIcon(div_icon_0cb99d98e33d41b75b01f11e1f154081);
+            
+    
+        function geo_json_8f89f5ef0d9b0c2b73f5449567c560bb_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_8f89f5ef0d9b0c2b73f5449567c560bb_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_8f89f5ef0d9b0c2b73f5449567c560bb = L.geoJson(null, {
+                onEachFeature: geo_json_8f89f5ef0d9b0c2b73f5449567c560bb_onEachFeature,
+            
+                style: geo_json_8f89f5ef0d9b0c2b73f5449567c560bb_styler,
+            ...{
+}
+        });
+
+        function geo_json_8f89f5ef0d9b0c2b73f5449567c560bb_add (data) {
+            geo_json_8f89f5ef0d9b0c2b73f5449567c560bb
+                .addData(data);
+        }
+            geo_json_8f89f5ef0d9b0c2b73f5449567c560bb_add({"features": [{"geometry": {"coordinates": [[[23.647071876105457, 46.76755133266005], [23.647341370690693, 46.76755133266005], [23.647341370690693, 46.76782082724529], [23.648958338202107, 46.76782082724529], [23.648958338202107, 46.76809032183052], [23.648688843616874, 46.76809032183052], [23.648688843616874, 46.76835981641576], [23.647880359861166, 46.76835981641576], [23.647880359861166, 46.76862931100099], [23.64761086527593, 46.76862931100099], [23.64761086527593, 46.76889880558623], [23.647071876105457, 46.76889880558623], [23.647071876105457, 46.76862931100099], [23.64680238152022, 46.76862931100099], [23.64680238152022, 46.76889880558623], [23.645454908594044, 46.76889880558623], [23.645454908594044, 46.76862931100099], [23.644646424838335, 46.76862931100099], [23.644646424838335, 46.76835981641576], [23.643837941082626, 46.76835981641576], [23.643837941082626, 46.76809032183052], [23.64356844649739, 46.76809032183052], [23.64356844649739, 46.76782082724529], [23.643837941082626, 46.76782082724529], [23.643837941082626, 46.76755133266005], [23.64491591942357, 46.76755133266005], [23.64491591942357, 46.76782082724529], [23.64572440317928, 46.76782082724529], [23.64572440317928, 46.76809032183052], [23.646532886934985, 46.76809032183052], [23.646532886934985, 46.76782082724529], [23.647071876105457, 46.76782082724529], [23.647071876105457, 46.76755133266005]], [[23.64761086527593, 46.76835981641576], [23.64761086527593, 46.76862931100099], [23.647341370690693, 46.76862931100099], [23.647341370690693, 46.76835981641576], [23.64761086527593, 46.76835981641576]]], "geodesic": false, "type": "Polygon"}, "id": "+87746-173539", "properties": {"area_ha": 3.5674555519507094, "elev": 330.8609621062309, "hand": 0.9386796121534654, "lat": 46.76821578326832, "lon": 23.64616116664598, "mean": 0.8104794169294423, "rank_score": 1.5308099461694489, "rel1k": -2.5555524601982507, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8f89f5ef0d9b0c2b73f5449567c560bb.addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var marker_37baf0a1c6095fd1f5ed003384f8c3c5 = L.marker(
+                [46.76821578326832, 23.64616116664598],
+                {
+}
+            ).addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var div_icon_ba1bb2f7c8bbd02bdeb8aa3580bb4d29 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e3\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_82bbe5e00190bdb00ee4ca508420c1f4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fd6bfe667e44092b418e67af7625ef24 = $(`<div id="html_fd6bfe667e44092b418e67af7625ef24" style="width: 100.0%; height: 100.0%;"><b>#3 cluj</b><br>suprafață: 3.6 ha<br>scor ghost: 0.81<br>HAND: 0.9 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_82bbe5e00190bdb00ee4ca508420c1f4.setContent(html_fd6bfe667e44092b418e67af7625ef24);
+            
+        
+
+        marker_37baf0a1c6095fd1f5ed003384f8c3c5.bindPopup(popup_82bbe5e00190bdb00ee4ca508420c1f4)
+        ;
+
+        
+    
+    
+            marker_37baf0a1c6095fd1f5ed003384f8c3c5.bindTooltip(
+                `<div>
+                     #3 cluj
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_37baf0a1c6095fd1f5ed003384f8c3c5.setIcon(div_icon_ba1bb2f7c8bbd02bdeb8aa3580bb4d29);
+            
+    
+        function geo_json_fe012cf8aef40b57ad416e98bd228fa6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_fe012cf8aef40b57ad416e98bd228fa6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_fe012cf8aef40b57ad416e98bd228fa6 = L.geoJson(null, {
+                onEachFeature: geo_json_fe012cf8aef40b57ad416e98bd228fa6_onEachFeature,
+            
+                style: geo_json_fe012cf8aef40b57ad416e98bd228fa6_styler,
+            ...{
+}
+        });
+
+        function geo_json_fe012cf8aef40b57ad416e98bd228fa6_add (data) {
+            geo_json_fe012cf8aef40b57ad416e98bd228fa6
+                .addData(data);
+        }
+            geo_json_fe012cf8aef40b57ad416e98bd228fa6_add({"features": [{"geometry": {"coordinates": [[[23.63063270640607, 46.763239419296276], [23.630902200991304, 46.763239419296276], [23.630902200991304, 46.763508913881516], [23.63198017933225, 46.763508913881516], [23.63198017933225, 46.76377840846675], [23.63251916850272, 46.76377840846675], [23.63251916850272, 46.764586892222454], [23.63198017933225, 46.764586892222454], [23.63198017933225, 46.76377840846675], [23.631710684747013, 46.76377840846675], [23.631710684747013, 46.76431739763722], [23.63117169557654, 46.76431739763722], [23.63117169557654, 46.764586892222454], [23.631710684747013, 46.764586892222454], [23.631710684747013, 46.765125881392926], [23.63198017933225, 46.765125881392926], [23.63198017933225, 46.76485638680769], [23.632249673917485, 46.76485638680769], [23.632249673917485, 46.7656648705634], [23.63198017933225, 46.7656648705634], [23.63198017933225, 46.765395375978166], [23.63117169557654, 46.765395375978166], [23.63117169557654, 46.765125881392926], [23.63063270640607, 46.765125881392926], [23.63063270640607, 46.76485638680769], [23.630363211820836, 46.76485638680769], [23.630363211820836, 46.764586892222454], [23.629015738894655, 46.764586892222454], [23.629015738894655, 46.76431739763722], [23.62928523347989, 46.76431739763722], [23.62928523347989, 46.763508913881516], [23.629824222650363, 46.763508913881516], [23.629824222650363, 46.763239419296276], [23.630363211820836, 46.763239419296276], [23.630363211820836, 46.763508913881516], [23.63063270640607, 46.763508913881516], [23.63063270640607, 46.763239419296276]]], "geodesic": false, "type": "Polygon"}, "id": "+87685-173523", "properties": {"area_ha": 3.6907451620334264, "elev": 334.14714190225965, "hand": 1.6104419046791392, "lat": 46.76425451401396, "lon": 23.630857278858485, "mean": 0.7512186229228973, "rank_score": 1.4431895490684115, "rel1k": -2.524644151894751, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_fe012cf8aef40b57ad416e98bd228fa6.addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var marker_ffe93703ed4b7c05d2eccd19577ff5c8 = L.marker(
+                [46.76425451401396, 23.630857278858485],
+                {
+}
+            ).addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var div_icon_e737a9ff924a9456dd343f59d1ab7db8 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e4\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_a2a63a274e6a7e153899ddcee5ea5be5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d0e00f47e68eba5c4e5ce94c8397dd4b = $(`<div id="html_d0e00f47e68eba5c4e5ce94c8397dd4b" style="width: 100.0%; height: 100.0%;"><b>#4 cluj</b><br>suprafață: 3.7 ha<br>scor ghost: 0.75<br>HAND: 1.6 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_a2a63a274e6a7e153899ddcee5ea5be5.setContent(html_d0e00f47e68eba5c4e5ce94c8397dd4b);
+            
+        
+
+        marker_ffe93703ed4b7c05d2eccd19577ff5c8.bindPopup(popup_a2a63a274e6a7e153899ddcee5ea5be5)
+        ;
+
+        
+    
+    
+            marker_ffe93703ed4b7c05d2eccd19577ff5c8.bindTooltip(
+                `<div>
+                     #4 cluj
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ffe93703ed4b7c05d2eccd19577ff5c8.setIcon(div_icon_e737a9ff924a9456dd343f59d1ab7db8);
+            
+    
+        function geo_json_4801b837a5cf222803bd5c54471720a8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_4801b837a5cf222803bd5c54471720a8_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4801b837a5cf222803bd5c54471720a8 = L.geoJson(null, {
+                onEachFeature: geo_json_4801b837a5cf222803bd5c54471720a8_onEachFeature,
+            
+                style: geo_json_4801b837a5cf222803bd5c54471720a8_styler,
+            ...{
+}
+        });
+
+        function geo_json_4801b837a5cf222803bd5c54471720a8_add (data) {
+            geo_json_4801b837a5cf222803bd5c54471720a8
+                .addData(data);
+        }
+            geo_json_4801b837a5cf222803bd5c54471720a8_add({"features": [{"geometry": {"coordinates": [[[23.53577061240305, 46.78075656733661], [23.53630960157352, 46.78075656733661], [23.53630960157352, 46.78102606192184], [23.536579096158757, 46.78102606192184], [23.536579096158757, 46.78129555650708], [23.53630960157352, 46.78129555650708], [23.53630960157352, 46.781565051092315], [23.535501117817812, 46.781565051092315], [23.535501117817812, 46.781834545677555], [23.534692634062104, 46.781834545677555], [23.534692634062104, 46.78210404026279], [23.534153644891635, 46.78210404026279], [23.534153644891635, 46.78237353484802], [23.533345161135927, 46.78237353484802], [23.533345161135927, 46.78264302943326], [23.532806171965454, 46.78264302943326], [23.532806171965454, 46.78291252401849], [23.53172819362451, 46.78291252401849], [23.53172819362451, 46.78237353484802], [23.532536677380218, 46.78237353484802], [23.532536677380218, 46.78210404026279], [23.532806171965454, 46.78210404026279], [23.532806171965454, 46.781834545677555], [23.533345161135927, 46.781834545677555], [23.533345161135927, 46.781565051092315], [23.5338841503064, 46.781565051092315], [23.5338841503064, 46.78129555650708], [23.535501117817812, 46.78129555650708], [23.535501117817812, 46.78102606192184], [23.53577061240305, 46.78102606192184], [23.53577061240305, 46.78075656733661]]], "geodesic": false, "type": "Polygon"}, "id": "+87334-173588", "properties": {"area_ha": 2.8286436053102704, "elev": 349.54999511177, "hand": 0.5518588666532536, "lat": 46.78187555867696, "lon": 23.534089222756883, "mean": 0.7888132787269094, "rank_score": 1.3266712838679942, "rel1k": -4.74046134899895, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4801b837a5cf222803bd5c54471720a8.addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var marker_67613ac2c8a142bb387f855b81e88031 = L.marker(
+                [46.78187555867696, 23.534089222756883],
+                {
+}
+            ).addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var div_icon_8d9807c21f64b4072dbcc168018782c5 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e5\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_30c7bb720db394b0106cdb0627922767 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2db2b01ac53f7d45b9174f7d3f2100de = $(`<div id="html_2db2b01ac53f7d45b9174f7d3f2100de" style="width: 100.0%; height: 100.0%;"><b>#5 cluj</b><br>suprafață: 2.8 ha<br>scor ghost: 0.79<br>HAND: 0.6 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_30c7bb720db394b0106cdb0627922767.setContent(html_2db2b01ac53f7d45b9174f7d3f2100de);
+            
+        
+
+        marker_67613ac2c8a142bb387f855b81e88031.bindPopup(popup_30c7bb720db394b0106cdb0627922767)
+        ;
+
+        
+    
+    
+            marker_67613ac2c8a142bb387f855b81e88031.bindTooltip(
+                `<div>
+                     #5 cluj
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_67613ac2c8a142bb387f855b81e88031.setIcon(div_icon_8d9807c21f64b4072dbcc168018782c5);
+            
+    
+        function geo_json_83edb3996e8c9ddd3383d631eada01f3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_83edb3996e8c9ddd3383d631eada01f3_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_83edb3996e8c9ddd3383d631eada01f3 = L.geoJson(null, {
+                onEachFeature: geo_json_83edb3996e8c9ddd3383d631eada01f3_onEachFeature,
+            
+                style: geo_json_83edb3996e8c9ddd3383d631eada01f3_styler,
+            ...{
+}
+        });
+
+        function geo_json_83edb3996e8c9ddd3383d631eada01f3_add (data) {
+            geo_json_83edb3996e8c9ddd3383d631eada01f3
+                .addData(data);
+        }
+            geo_json_83edb3996e8c9ddd3383d631eada01f3_add({"features": [{"geometry": {"coordinates": [[[23.598562850763003, 46.79342281284269], [23.598562850763003, 46.79315331825746], [23.598293356177766, 46.79315331825746], [23.598293356177766, 46.79288382367222], [23.598562850763003, 46.79288382367222], [23.598562850763003, 46.79315331825746], [23.59883234534824, 46.79315331825746], [23.59883234534824, 46.792075339916515], [23.600449312859656, 46.792075339916515], [23.600449312859656, 46.791805845331275], [23.60071880744489, 46.791805845331275], [23.60071880744489, 46.792075339916515], [23.600449312859656, 46.792075339916515], [23.600449312859656, 46.79315331825746], [23.600988302030125, 46.79315331825746], [23.600988302030125, 46.793961802013165], [23.599910323689183, 46.793961802013165], [23.599910323689183, 46.79369230742793], [23.59883234534824, 46.79369230742793], [23.59883234534824, 46.79342281284269], [23.598562850763003, 46.79342281284269]]], "geodesic": false, "type": "Polygon"}, "id": "+87573-173629", "properties": {"area_ha": 2.8895387236918357, "elev": 329.7918370373566, "hand": 0.9171174803871656, "lat": 46.793001366912584, "lon": 23.599775573837846, "mean": 0.7737107758826398, "rank_score": 1.3152033458556323, "rel1k": -3.600894315459873, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_83edb3996e8c9ddd3383d631eada01f3.addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var marker_2fdf247cc64d4b45077c858965db36a1 = L.marker(
+                [46.793001366912584, 23.599775573837846],
+                {
+}
+            ).addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var div_icon_6e90ad4de0495cb28e89619fc6565c7a = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e6\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_43e353d159076d631c68d959b1bb45d4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a256c8532dfeb56a1728acdd97cc366b = $(`<div id="html_a256c8532dfeb56a1728acdd97cc366b" style="width: 100.0%; height: 100.0%;"><b>#6 cluj</b><br>suprafață: 2.9 ha<br>scor ghost: 0.77<br>HAND: 0.9 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_43e353d159076d631c68d959b1bb45d4.setContent(html_a256c8532dfeb56a1728acdd97cc366b);
+            
+        
+
+        marker_2fdf247cc64d4b45077c858965db36a1.bindPopup(popup_43e353d159076d631c68d959b1bb45d4)
+        ;
+
+        
+    
+    
+            marker_2fdf247cc64d4b45077c858965db36a1.bindTooltip(
+                `<div>
+                     #6 cluj
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2fdf247cc64d4b45077c858965db36a1.setIcon(div_icon_6e90ad4de0495cb28e89619fc6565c7a);
+            
+    
+        function geo_json_5c46a612fa301ba59ea20cd41e05ecdc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_5c46a612fa301ba59ea20cd41e05ecdc_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5c46a612fa301ba59ea20cd41e05ecdc = L.geoJson(null, {
+                onEachFeature: geo_json_5c46a612fa301ba59ea20cd41e05ecdc_onEachFeature,
+            
+                style: geo_json_5c46a612fa301ba59ea20cd41e05ecdc_styler,
+            ...{
+}
+        });
+
+        function geo_json_5c46a612fa301ba59ea20cd41e05ecdc_add (data) {
+            geo_json_5c46a612fa301ba59ea20cd41e05ecdc
+                .addData(data);
+        }
+            geo_json_5c46a612fa301ba59ea20cd41e05ecdc_add({"features": [{"geometry": {"coordinates": [[[23.61122909626909, 46.79557876952458], [23.611498590854325, 46.79557876952458], [23.611498590854325, 46.795848264109814], [23.612037580024797, 46.795848264109814], [23.612037580024797, 46.797195737036], [23.61176808543956, 46.797195737036], [23.61176808543956, 46.79746523162123], [23.611498590854325, 46.79746523162123], [23.611498590854325, 46.798004220791704], [23.61122909626909, 46.798004220791704], [23.61122909626909, 46.79746523162123], [23.610690107098616, 46.79746523162123], [23.610690107098616, 46.797734726206464], [23.610959601683852, 46.797734726206464], [23.610959601683852, 46.798004220791704], [23.610690107098616, 46.798004220791704], [23.610690107098616, 46.797734726206464], [23.61042061251338, 46.797734726206464], [23.61042061251338, 46.79746523162123], [23.610690107098616, 46.79746523162123], [23.610690107098616, 46.797195737036], [23.60961212875767, 46.797195737036], [23.60961212875767, 46.796117758695054], [23.61042061251338, 46.796117758695054], [23.61042061251338, 46.79638725328029], [23.610959601683852, 46.79638725328029], [23.610959601683852, 46.795848264109814], [23.61122909626909, 46.795848264109814], [23.61122909626909, 46.79557876952458]], [[23.610690107098616, 46.796656747865526], [23.610690107098616, 46.79692624245076], [23.61042061251338, 46.79692624245076], [23.61042061251338, 46.796656747865526], [23.610690107098616, 46.796656747865526]], [[23.611498590854325, 46.796117758695054], [23.611498590854325, 46.79638725328029], [23.61122909626909, 46.79638725328029], [23.61122909626909, 46.796117758695054], [23.611498590854325, 46.796117758695054]]], "geodesic": false, "type": "Polygon"}, "id": "+87613-173643", "properties": {"area_ha": 2.7663880984541693, "elev": 327.743196673534, "hand": 0.511382622501575, "lat": 46.796755559929615, "lon": 23.61095061890541, "mean": 0.7576770318879021, "rank_score": 1.260203484348161, "rel1k": -2.1326274076126537, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5c46a612fa301ba59ea20cd41e05ecdc.addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var marker_0280d25c6b316ba3f5881530ad2279b2 = L.marker(
+                [46.796755559929615, 23.61095061890541],
+                {
+}
+            ).addTo(feature_group_99be7169f5cf7dd961dc654ded5c6477);
+        
+    
+            var div_icon_ab607634e76dfa490d77a9e44a5047eb = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e7\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_f24371380b9c50f14bd3627229bd6816 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c1f9b0944f4d3037ed9f71517a6ffca5 = $(`<div id="html_c1f9b0944f4d3037ed9f71517a6ffca5" style="width: 100.0%; height: 100.0%;"><b>#7 cluj</b><br>suprafață: 2.8 ha<br>scor ghost: 0.76<br>HAND: 0.5 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_f24371380b9c50f14bd3627229bd6816.setContent(html_c1f9b0944f4d3037ed9f71517a6ffca5);
+            
+        
+
+        marker_0280d25c6b316ba3f5881530ad2279b2.bindPopup(popup_f24371380b9c50f14bd3627229bd6816)
+        ;
+
+        
+    
+    
+            marker_0280d25c6b316ba3f5881530ad2279b2.bindTooltip(
+                `<div>
+                     #7 cluj
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0280d25c6b316ba3f5881530ad2279b2.setIcon(div_icon_ab607634e76dfa490d77a9e44a5047eb);
+            
+    
+            feature_group_99be7169f5cf7dd961dc654ded5c6477.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var feature_group_8fd74b389268bee066d0273de838a5f0 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_16a852146fdb082f56c82291e1597856_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_16a852146fdb082f56c82291e1597856_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_16a852146fdb082f56c82291e1597856 = L.geoJson(null, {
+                onEachFeature: geo_json_16a852146fdb082f56c82291e1597856_onEachFeature,
+            
+                style: geo_json_16a852146fdb082f56c82291e1597856_styler,
+            ...{
+}
+        });
+
+        function geo_json_16a852146fdb082f56c82291e1597856_add (data) {
+            geo_json_16a852146fdb082f56c82291e1597856
+                .addData(data);
+        }
+            geo_json_16a852146fdb082f56c82291e1597856_add({"features": [{"geometry": {"coordinates": [[[28.00452982478402, 45.44783634876006], [28.005607803124963, 45.44783634876006], [28.005607803124963, 45.448105843345296], [28.005338308539727, 45.448105843345296], [28.005338308539727, 45.448375337930536], [28.005607803124963, 45.448375337930536], [28.005607803124963, 45.44864483251577], [28.0058772977102, 45.44864483251577], [28.0058772977102, 45.448375337930536], [28.006146792295436, 45.448375337930536], [28.006146792295436, 45.44864483251577], [28.0058772977102, 45.44864483251577], [28.0058772977102, 45.44891432710101], [28.006146792295436, 45.44891432710101], [28.006146792295436, 45.44945331627148], [28.006685781465908, 45.44945331627148], [28.006685781465908, 45.44972281085671], [28.00695527605114, 45.44972281085671], [28.00695527605114, 45.450261800027185], [28.006146792295436, 45.450261800027185], [28.006146792295436, 45.44945331627148], [28.005607803124963, 45.44945331627148], [28.005607803124963, 45.449992305441945], [28.00506881395449, 45.449992305441945], [28.00506881395449, 45.44918382168624], [28.005338308539727, 45.44918382168624], [28.005338308539727, 45.44864483251577], [28.00452982478402, 45.44864483251577], [28.00452982478402, 45.44783634876006]]], "geodesic": false, "type": "Polygon"}, "id": "+103918-168642", "properties": {"area_ha": 2.078927109620117, "elev": 11.154655939171677, "hand": 0.40232181696699887, "lat": 45.44906540089856, "lon": 28.0056282087853, "mean": 0.723259201555541, "rank_score": 1.0428301980512786, "rel1k": -2.6980198713449335, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_16a852146fdb082f56c82291e1597856.addTo(feature_group_8fd74b389268bee066d0273de838a5f0);
+        
+    
+            var marker_f662c2b809f26dddb73eb79b9fcdffdd = L.marker(
+                [45.44906540089856, 28.0056282087853],
+                {
+}
+            ).addTo(feature_group_8fd74b389268bee066d0273de838a5f0);
+        
+    
+            var div_icon_735f84db763d6ee6aebd45c14213e5e8 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_70c8204cfe65353deea20782e8065c1a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a9f839891c8cc99381a9959b3416243f = $(`<div id="html_a9f839891c8cc99381a9959b3416243f" style="width: 100.0%; height: 100.0%;"><b>#1 galati</b><br>suprafață: 2.1 ha<br>scor ghost: 0.72<br>HAND: 0.4 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_70c8204cfe65353deea20782e8065c1a.setContent(html_a9f839891c8cc99381a9959b3416243f);
+            
+        
+
+        marker_f662c2b809f26dddb73eb79b9fcdffdd.bindPopup(popup_70c8204cfe65353deea20782e8065c1a)
+        ;
+
+        
+    
+    
+            marker_f662c2b809f26dddb73eb79b9fcdffdd.bindTooltip(
+                `<div>
+                     #1 galati
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f662c2b809f26dddb73eb79b9fcdffdd.setIcon(div_icon_735f84db763d6ee6aebd45c14213e5e8);
+            
+    
+            feature_group_8fd74b389268bee066d0273de838a5f0.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var feature_group_68bfa2f4993006d6544dcbc91148eaf9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_68bfa2f4993006d6544dcbc91148eaf9.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var feature_group_dd812a08a16a644066644ee2e211b8e9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_75464a42d61c0aed7104731769fbf6a5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff2d55", "fillOpacity": 0.1, "weight": 2};
+            }
+        }
+
+        function geo_json_75464a42d61c0aed7104731769fbf6a5_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_75464a42d61c0aed7104731769fbf6a5 = L.geoJson(null, {
+                onEachFeature: geo_json_75464a42d61c0aed7104731769fbf6a5_onEachFeature,
+            
+                style: geo_json_75464a42d61c0aed7104731769fbf6a5_styler,
+            ...{
+}
+        });
+
+        function geo_json_75464a42d61c0aed7104731769fbf6a5_add (data) {
+            geo_json_75464a42d61c0aed7104731769fbf6a5
+                .addData(data);
+        }
+            geo_json_75464a42d61c0aed7104731769fbf6a5_add({"features": [{"geometry": {"coordinates": [[[21.93982367863631, 47.03839339082209], [21.94009317322154, 47.03839339082209], [21.94009317322154, 47.03866288540732], [21.940632162392014, 47.03866288540732], [21.940632162392014, 47.03920187457779], [21.93982367863631, 47.03920187457779], [21.93982367863631, 47.03947136916303], [21.939554184051072, 47.03947136916303], [21.939554184051072, 47.03920187457779], [21.939284689465836, 47.03920187457779], [21.939284689465836, 47.03947136916303], [21.937398227369183, 47.03947136916303], [21.937398227369183, 47.039740863748264], [21.936050754443006, 47.039740863748264], [21.936050754443006, 47.040010358333504], [21.936320249028242, 47.040010358333504], [21.936320249028242, 47.04027985291874], [21.936050754443006, 47.04027985291874], [21.936050754443006, 47.040010358333504], [21.93497277610206, 47.040010358333504], [21.93497277610206, 47.04027985291874], [21.933894797761116, 47.04027985291874], [21.933894797761116, 47.040549347503976], [21.933625303175884, 47.040549347503976], [21.933625303175884, 47.03947136916303], [21.934703281516825, 47.03947136916303], [21.934703281516825, 47.039740863748264], [21.93497277610206, 47.039740863748264], [21.93497277610206, 47.03947136916303], [21.935242270687297, 47.03947136916303], [21.935242270687297, 47.039740863748264], [21.935511765272533, 47.039740863748264], [21.935511765272533, 47.03947136916303], [21.936589743613478, 47.03947136916303], [21.936589743613478, 47.03920187457779], [21.937128732783947, 47.03920187457779], [21.937128732783947, 47.03866288540732], [21.93766772195442, 47.03866288540732], [21.93766772195442, 47.03893237999256], [21.937937216539655, 47.03893237999256], [21.937937216539655, 47.03866288540732], [21.93820671112489, 47.03866288540732], [21.93820671112489, 47.03893237999256], [21.938476205710128, 47.03893237999256], [21.938476205710128, 47.03866288540732], [21.938745700295364, 47.03866288540732], [21.938745700295364, 47.03893237999256], [21.9390151948806, 47.03893237999256], [21.9390151948806, 47.03866288540732], [21.93982367863631, 47.03866288540732], [21.93982367863631, 47.03839339082209]], [[21.93766772195442, 47.03893237999256], [21.93766772195442, 47.03920187457779], [21.937398227369183, 47.03920187457779], [21.937398227369183, 47.03893237999256], [21.93766772195442, 47.03893237999256]]], "geodesic": false, "type": "Polygon"}, "id": "+81411-174544", "properties": {"area_ha": 3.7942510697719736, "elev": 128.56163725874728, "hand": 1.063671792635021, "lat": 47.039410531769384, "lon": 21.937085297427537, "mean": 0.7792667410066051, "rank_score": 1.517921014972826, "rel1k": -0.6284368256899052, "seen_water_1984": 0, "zone": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_75464a42d61c0aed7104731769fbf6a5.addTo(feature_group_dd812a08a16a644066644ee2e211b8e9);
+        
+    
+            var marker_a87d0eb8ec2ea101fa750f8ea41cb59b = L.marker(
+                [47.039410531769384, 21.937085297427537],
+                {
+}
+            ).addTo(feature_group_dd812a08a16a644066644ee2e211b8e9);
+        
+    
+            var div_icon_d9f13cc3a2e2bca89a9f93dd7f1b7461 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background:#ff2d55;color:#fff;border-radius:50%;width:22px;height:22px;text-align:center;font:bold 12px/22px sans-serif\u0027\u003e1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_bdb3c261c325b459fe9be5085b1abaea = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6bbd9b9e7a1125a2188731398f64a38f = $(`<div id="html_6bbd9b9e7a1125a2188731398f64a38f" style="width: 100.0%; height: 100.0%;"><b>#1 oradea</b><br>suprafață: 3.8 ha<br>scor ghost: 0.78<br>HAND: 1.1 m<br>văzut apă din 1984: 0% din zonă</div>`)[0];
+                popup_bdb3c261c325b459fe9be5085b1abaea.setContent(html_6bbd9b9e7a1125a2188731398f64a38f);
+            
+        
+
+        marker_a87d0eb8ec2ea101fa750f8ea41cb59b.bindPopup(popup_bdb3c261c325b459fe9be5085b1abaea)
+        ;
+
+        
+    
+    
+            marker_a87d0eb8ec2ea101fa750f8ea41cb59b.bindTooltip(
+                `<div>
+                     #1 oradea
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a87d0eb8ec2ea101fa750f8ea41cb59b.setIcon(div_icon_d9f13cc3a2e2bca89a9f93dd7f1b7461);
+            
+    
+            feature_group_dd812a08a16a644066644ee2e211b8e9.addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+        
+    
+            var layer_control_cc1ed732cab96052fd2b0d4f570f50ab_layers = {
+                base_layers : {
+                    "Hart\u0103" : tile_layer_86eea55836956de39fa33b3bbfbfd732,
+                    "Satelit" : tile_layer_4b0dd64c059c375ea940659b315d76ec,
+                },
+                overlays :  {
+                    "P(ap\u0103) dup\u0103 teren \u2014 bucuresti" : tile_layer_d685378a72d5a87b95b4753b66b28877,
+                    "Scor ghost lake \u2014 bucuresti" : tile_layer_9d85d83404dd926b1d2bda4ca3dab4b5,
+                    "Ap\u0103 1984+ acum construit \u2014 bucuresti" : tile_layer_09a3d3757058c72d283f00bc750c9366,
+                    "Ape vizibile (OSM) \u2014 bucuresti" : tile_layer_5330db4de4f4214e97748a0a00f1d797,
+                    "P(ap\u0103) dup\u0103 teren \u2014 timisoara" : tile_layer_645603374f9511583c31373b42f76476,
+                    "Scor ghost lake \u2014 timisoara" : tile_layer_673b016b7e2ea50671d1ec94f3b2ab01,
+                    "Ap\u0103 1984+ acum construit \u2014 timisoara" : tile_layer_871df275ea356c680070c71136c0dc30,
+                    "Ape vizibile (OSM) \u2014 timisoara" : tile_layer_d34f68cf397d9aed15a94bf5f0d76a0d,
+                    "P(ap\u0103) dup\u0103 teren \u2014 iasi" : tile_layer_3ab5f1709e1caa0f73e6cc84bfa06ac5,
+                    "Scor ghost lake \u2014 iasi" : tile_layer_e48d5a35868304012ba3c5f8b73ee8c5,
+                    "Ap\u0103 1984+ acum construit \u2014 iasi" : tile_layer_33fe18514b0d2582223038702f95a1c0,
+                    "Ape vizibile (OSM) \u2014 iasi" : tile_layer_9bbee217201974c85e555bab5c36742c,
+                    "P(ap\u0103) dup\u0103 teren \u2014 cluj" : tile_layer_aa5a108efa95600de01a2c5bafb78884,
+                    "Scor ghost lake \u2014 cluj" : tile_layer_5c6c8ad19a7bfdae91e939c0f1c3aa4b,
+                    "Ap\u0103 1984+ acum construit \u2014 cluj" : tile_layer_cef8e650dd8d13948bc8a75052f87496,
+                    "Ape vizibile (OSM) \u2014 cluj" : tile_layer_693bf40aacb5e602b6bcd5c8af93bc0b,
+                    "P(ap\u0103) dup\u0103 teren \u2014 galati" : tile_layer_45c5ec73666c1999a59225e2e2e4565a,
+                    "Scor ghost lake \u2014 galati" : tile_layer_e0f9e5aa482ede60d297db6e0b4432d7,
+                    "Ap\u0103 1984+ acum construit \u2014 galati" : tile_layer_8d56ae8c3840e4c396487fbeff83802a,
+                    "Ape vizibile (OSM) \u2014 galati" : tile_layer_d12d9f08554ce7944e22eafb52374f6a,
+                    "P(ap\u0103) dup\u0103 teren \u2014 craiova" : tile_layer_2acf91be37f24d21c5dd785a7d03560d,
+                    "Scor ghost lake \u2014 craiova" : tile_layer_8a8352c6e471108bf4917f7f25a87725,
+                    "Ap\u0103 1984+ acum construit \u2014 craiova" : tile_layer_71b755afb2bfa023e781397a74ae8976,
+                    "Ape vizibile (OSM) \u2014 craiova" : tile_layer_62d2364d809a007fd42c38854080ccc3,
+                    "P(ap\u0103) dup\u0103 teren \u2014 oradea" : tile_layer_244bb04d036df7fab9a1c16a5227dbc0,
+                    "Scor ghost lake \u2014 oradea" : tile_layer_154faecd440218cbaac3b21b887cd99b,
+                    "Ap\u0103 1984+ acum construit \u2014 oradea" : tile_layer_a3cd82b70c973a2ffd5d467e19cbcdec,
+                    "Ape vizibile (OSM) \u2014 oradea" : tile_layer_8ffda3c2b2941b8c8b8eb93cbd3070f9,
+                    "Candida\u021bi bucuresti" : feature_group_ad3f9529146c9a7c3552997fee86bb8a,
+                    "Candida\u021bi timisoara" : feature_group_79bf4da665566c165c4505431f0e6ce3,
+                    "Candida\u021bi iasi" : feature_group_f2a81e897cc9e3a260cf8fafaf2732ed,
+                    "Candida\u021bi cluj" : feature_group_99be7169f5cf7dd961dc654ded5c6477,
+                    "Candida\u021bi galati" : feature_group_8fd74b389268bee066d0273de838a5f0,
+                    "Candida\u021bi craiova" : feature_group_68bfa2f4993006d6544dcbc91148eaf9,
+                    "Candida\u021bi oradea" : feature_group_dd812a08a16a644066644ee2e211b8e9,
+                },
+            };
+            let layer_control_cc1ed732cab96052fd2b0d4f570f50ab = L.control.layers(
+                layer_control_cc1ed732cab96052fd2b0d4f570f50ab_layers.base_layers,
+                layer_control_cc1ed732cab96052fd2b0d4f570f50ab_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_9916df96bf1115edcca1f1a77ac6855b);
+
+        
+</script>
+</html>

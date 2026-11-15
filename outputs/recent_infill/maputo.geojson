@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "columns": {"area_ha": "Number", "count": "Long<0, 4294967295>", "lat": "Object", "lon": "Object", "system:index": "String", "v": "Byte<0, 1>", "vv_after": "Float", "vv_before": "Float"}, "features": []}
