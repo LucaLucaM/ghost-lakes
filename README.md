@@ -5,9 +5,9 @@ We used AI and free satellite data to find lakes and lagoons that cities fill in
 
 ## Why?
 
-| Risk | Real example (the ground stays soft and rain still flows there) |
+| Risk | Real example |
 |---|---|
-| **Floods** | Chennai 2015: a parliamentary committee found that encroachment on lakes and riverbeds played a major role.[^1] Hyderabad 2020: about half of the city's lakes had been encroached.[^2] |
+| **Floods** | Chennai 2015: encroachment on lakes and riverbeds played a major role.[^1] Hyderabad 2020: about half of the city's lakes had been encroached.[^2] |
 | **Building collapse** | Rana Plaza, Dhaka 2013 (over 1,100 dead): part of it stood on a pond filled with rubbish.[^3] |
 | **Earthquakes** | Mexico City 1985: severe damage was confined to the old lake bed, whose soft clay amplified the shaking.[^4] |
 | **Cost** | USA: wetland loss since 1985 added about $10 billion to flood insurance claims (*Nature Water*, 2026).[^5] |
