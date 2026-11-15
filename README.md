@@ -1,7 +1,7 @@
 # Ghost Lakes: finding the water that cities bury
 *Track: Climate · Team of 2 students (Luca Valentin Mureșan, Vlad Mihai Tutunaru)*
 
-> We used AI and free satellite data to find lakes and lagoons that cities fill in and build on, including ones being filled right now.
+We used AI and free satellite data to find lakes and lagoons that cities fill in and build on, including ones being filled right now.
 
 ## Why?
 
