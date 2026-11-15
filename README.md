@@ -45,6 +45,24 @@ Mexico City (built on drained Lake Texcoco), Phnom Penh (15 of 25 lakes filled b
 - **Misses** vegetated marshes and small fills under 0.5 ha (33 ha is a lower bound). Dates are uncertain for 4 of the 11 sites.
 - **Next:** ground checks with local journalists and lagoon authorities, marsh detection and a flood model.
 
+## Datasets and models
+
+All data is free and accessed through [Google Earth Engine](https://earthengine.google.com/).
+
+| Dataset / model | Used for |
+|---|---|
+| [Dynamic World V1](https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1) (Google & WRI, **pretrained deep-learning model**, [paper](https://www.nature.com/articles/s41597-022-01307-4)) | water vs built-up/bare land, 2023 vs 2026 |
+| [JRC Global Surface Water v1.4](https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_4_GlobalSurfaceWater) + [yearly history](https://developers.google.com/earth-engine/datasets/catalog/JRC_GSW1_4_YearlyHistory) | where water stood 1984–2021; training labels |
+| [Sentinel-1 GRD](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD) | radar check through clouds, dating each fill |
+| [Sentinel-2 SR](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED) · [Landsat 5 L2](https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LT05_C02_T1_L2) | before/after images for review by eye |
+| [FABDEM](https://gee-community-catalog.org/projects/fabdem/) · [MERIT Hydro](https://developers.google.com/earth-engine/datasets/catalog/MERIT_Hydro_v1_0_1) | terrain features (elevation, height above rivers) |
+| [GHSL population 2025](https://developers.google.com/earth-engine/datasets/catalog/JRC_GHSL_P2023A_GHS_POP) · [GHSL settlement model 2025](https://developers.google.com/earth-engine/datasets/catalog/JRC_GHSL_P2023A_GHS_SMOD) | people near each site; urban areas for the world scan |
+| [WDPA](https://developers.google.com/earth-engine/datasets/catalog/WCMC_WDPA_current_polygons) | Ramsar wetland boundaries (extra screen) |
+| [OpenStreetMap](https://www.openstreetmap.org/copyright) (Overpass, Nominatim) | mapped water and neighbourhood names, for review |
+| **Our model:** Random Forest (Earth Engine `smileRandomForest`) | terrain AI, trained by us on 23,000 points in 7 Romanian regions |
+
+We also used Claude Code throught the whole proccess.
+
 [^1]: [The News Minute (Parliament committee report)](https://www.thenewsminute.com/article/did-chennai-learn-any-lessons-2015-floods-70597)
 [^2]: [The Hans India](https://www.thehansindia.com/news/cities/hyderabad/hyderabad-encroachers-threaten-to-gobble-up-kappala-cheruvu-691917)
 [^3]: [Gulf News (government probe)](https://gulfnews.com/world/oceania/owners-failings-led-to-factory-collapse-1.1187447)
